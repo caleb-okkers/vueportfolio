@@ -22,7 +22,9 @@
           <AboutSection :about="about" :hobbies="hobbies"/>
         </div>
       </section>
-      <section id="resume"></section>
+      <section id="resume">
+        <resume-section/>
+      </section>
       <section id="projects">
         <Card/>
       </section>
@@ -39,6 +41,7 @@ import Footer from '@/components/Footer.vue'
 import Card from '@/components/Card.vue'
 import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
+import ResumeSection from '@/components/ResumeSection.vue'
 
 export default {
   computed: {
@@ -54,7 +57,8 @@ export default {
     Footer,
     Card,
     HomeSection,
-    AboutSection
+    AboutSection,
+    ResumeSection
   },
   mounted() {
     this.$store.dispatch('getAboutMe'),

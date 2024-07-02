@@ -2,12 +2,13 @@
     <video autoplay loop muted playsinline class="video-background" id="bgVideo">
       <source src="https://videos.pexels.com/video-files/3129977/3129977-uhd_2560_1440_30fps.mp4" type="video/mp4">
       Your browser does not support the video tag.
+      <!-- remember to host video -->
     </video>
     <div class="content">
-      <div class="text">Caleb Okkers</div>
-      <p v-if="title">
+      <h1 class="text">Caleb Okkers</h1>
+      <h3 v-if="title" class="title">
         <span>{{ title }}</span>
-      </p>
+      </h3>
       <Spinner v-else />
       <div class="home-image">
         <img src="https://github.com/caleb-okkers/coolCards/blob/master/images/IMG_2711onetooneratio.jpg?raw=true" alt="Caleb Okkers" loading="lazy">
@@ -43,7 +44,7 @@ export default {
     }
 
     onMounted(() => {
-      store.dispatch('fetchJobTitle')
+      store.dispatch('getJobTitle')
       repeat()
     })
 

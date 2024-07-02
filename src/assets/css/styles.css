@@ -174,6 +174,15 @@ body {
     text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
 
+#home .title {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vw;
+    text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
+}
+
 #home .home-image img {
     width: 400px;
     height: auto;
@@ -243,7 +252,7 @@ body {
     background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
 }
 
-
+/* about */
 
 #about {
     /* background: #060c21; */
@@ -312,7 +321,13 @@ p {
 }
 
 .box:hover {
-    height: 500px;
+    height: 400px;
+}
+
+.box:nth-child(1):hover,
+.box:nth-child(2):hover,
+.box:nth-child(3):hover {
+    height: 520px;
 }
 
 .box .imgBx {
@@ -396,6 +411,8 @@ p {
     opacity: 0;
     transition: 0.5s;
     margin-top: 170px;
+    font-family: Poppins;
+    padding-bottom: 10px;
 }
 
 .box:hover .content {
@@ -417,6 +434,7 @@ p {
     font-weight: 200;
     line-height: 20px;
     letter-spacing: 2px;
+    /* padding-bottom: 10px;  not working */
 }
 
 .box .content {
@@ -446,4 +464,29 @@ p {
     }
 
 
+}
+
+/* resume */
+
+#resume {
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#resume .text {
+    color: #000;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
+    
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+p {
+    color: #fff;
 }

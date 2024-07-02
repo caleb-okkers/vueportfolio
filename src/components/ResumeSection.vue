@@ -1,144 +1,161 @@
 <template>
-    <div class="timeline">
-      <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left' : 'right']">
-          
-
-                <div class="content">
-                  <h2>{{ item.institution }}</h2>
-                  <p>{{ item.qualification }}</p>
-                  <p>{{ item.year }}</p>
-              
-            </div>
-        </div>
+  <div class="container">
+    <div class="row pt-5">
+      <h2 class="text">Education</h2>
     </div>
-  </template>
-  
-  <script>
-  
-  export default {
-    name: 'ResumeSection',
-    props: {
-      education: {
-        type: Array,
-        required: true
-      }
+    <div class="row pt-5">
+      <div class="col d-flex justify-content-center">
+        <div class="timeline">
+          <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
+            <div class="text-box">
+              <h2>{{ item.institution }}</h2>
+              <small>{{ item.year }}</small>
+              <p>{{ item.qualification }}</p>
+              <span :class="[index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow']"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ResumeSection',
+  props: {
+    education: {
+      type: Array,
+      required: true
     }
   }
-  </script>
-  
-  <style scoped>
-  
-  .timeline {
+}
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.timeline {
   position: relative;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 0;
-  color: #B8860B;
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  background-color: #B8860B; /* Set the line background color */
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -0.5px;
-  z-index: 2; /* Ensure the line is above other elements */
+  margin: 100px auto;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  width: 10px; /* Adjust the width to accommodate the border */
   top: 0;
   bottom: 0;
+  width: 2px;
+  background: #fff;
   left: 50%;
-  margin-left: -5px; /* Half the width to center the border */
-  background: #B8860B;
-  border-radius: 3px;
-  z-index: 1;
+  margin-left: -1px;
 }
 
 .timeline-container {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
   width: 50%;
-  z-index: 3; /* Ensure containers are above the timeline */
+  box-sizing: border-box;
+  opacity: 0;
+  animation: movedown 1s linear forwards;
 }
 
-.timeline-container.left {
-  left: -50%;
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-.timeline-container.right {
+.timeline-container.left-container {
+  left: 0;
+}
+
+.timeline-container.right-container {
   left: 50%;
 }
 
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 15%;
-  right: 0;
-  bottom: 0;
-  border-radius: 6px;
-  padding: 2px; /* Adjust the padding to set the border width */
-  background: linear-gradient(235deg, #B8860B, #050505, #B8860B);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; 
-          mask-composite: exclude; 
-  z-index: 1;
-  min-width: 400px;
-}
-
-.timeline-container::after {
-  content: ' ';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: #B8860B;
-  border: 4px solid #B8860B;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 4; /* Ensure the circle is above everything else */
-}
-
-.timeline-container.right::after {
-  left: -16px;
-}
-
-.content {
+.text-box {
   padding: 20px 30px;
-  background-color: #000;
+  background: #000;
   position: relative;
   border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 5; /* Ensure content is above the timeline container */
-  min-width: 390px
+  font-size: 15px;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, gold, black, gold);
 }
 
-.timeline-container.left .content {
-  left: 0;
+.text-box h2 {
+  font-weight: 600;
 }
 
-.timeline-container.right .content {
-  left: 0;
+.text-box small {
+  display: block;
+  margin-bottom: 15px;
 }
 
-.content h2 {
-  font-family: Poppins;
-  font-size: 22px;
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #000;
+  right: -15px;
 }
 
-.content p {
-  font-family: Poppins;
-  font-size: 16px;
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #000;
+  left: -15px;
 }
 
-  </style>
+@media screen and (max-width: 600px) {
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    font-size: 13px;
+  }
+
+  .right-container {
+    left: 0%;
+  }
+
+  .timeline-container img {
+    left: 10px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #000;
+    border-left: 0;
+    left: -15px;
+  }
+}
+</style>

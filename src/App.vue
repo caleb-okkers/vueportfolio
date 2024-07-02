@@ -23,10 +23,9 @@
         </div>
       </section>
       <section id="resume">
-        <resume-section/>
+        <resume-section :education="education"/>
       </section>
       <section id="projects">
-        <Card/>
       </section>
       <section id="testimonials"></section>
       <section id="contact"></section>
@@ -38,31 +37,33 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
-import Card from '@/components/Card.vue'
 import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
 
 export default {
-  computed: {
+  computed: { 
     about() {
       return this.$store.state.aboutMe
     },
     hobbies() {
       return this.$store.state.hobbies
+    },
+    education () {
+      return this.$store.state.education
     }
   },
   components: {
     NavBar,
     Footer,
-    Card,
     HomeSection,
     AboutSection,
     ResumeSection
   },
   mounted() {
     this.$store.dispatch('getAboutMe'),
-    this.$store.dispatch('getHobbies')
+    this.$store.dispatch('getHobbies'),
+    this.$store.dispatch('getEducation')
   }
 }
 </script>

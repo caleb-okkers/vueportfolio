@@ -1,5 +1,5 @@
 <template>
-      <div class="container">
+      <div class="container" id="education-section">
         <div class="row pt-5">
           <h2 class="text">Education</h2>
         </div>
@@ -22,17 +22,29 @@
   </template>
   
   <script>
-  
   export default {
     name: 'EducationComp',
     computed: { 
-      education () {
-        return this.$store.state.education
+      education() {
+        return this.$store.state.education;
       }
     },
-    
     mounted() {
-      this.$store.dispatch('getEducation')
+      this.$store.dispatch('getEducation');
+      
+      // Intersection Observer setup
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.timeline-container').forEach((el, index) => {
+              el.style.animationPlayState = 'running';
+            });
+            observer.unobserve(entry.target); // Stop observing once animation has started
+          }
+        });
+      }, { threshold: 0.1 }); // Trigger when 10% of the section is in view
+      
+      observer.observe(this.$el);
     }
   }
   </script>
@@ -71,6 +83,7 @@
     margin-left: -3px;
     z-index: 1;
     animation: moveline 6s linear forwards;
+    
   }
   
   @keyframes moveline {
@@ -89,6 +102,7 @@
     box-sizing: border-box;
     opacity: 0;
     animation: movedown 1s linear forwards;
+    animation-play-state: paused; /* Add this */
     z-index: 5;
     
   }
@@ -134,6 +148,7 @@
       right: -20px;
       top: 32px;
       z-index: 10;
+      border: 2px solid #fff;
     }
   
     .right-container img {

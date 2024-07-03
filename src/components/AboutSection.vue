@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <div class="row" v-for="info in about" :key="info.name">
+      <div class="row pt-5" v-for="info in about" :key="info.name">
         <div class="col">
           <div class="info">
             <h2 class="text">{{ info.name }}</h2>
@@ -8,7 +8,7 @@
           </div>
         </div>
       </div>
-      <div class="hobbies">
+      <div class="hobbies pt-5">
         <Card v-for="hobby in hobbies" :key="hobby.name">
         <template #img>
            <img :src= hobby.image alt="">

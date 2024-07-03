@@ -133,6 +133,7 @@
       right: -20px;
       top: 32px;
       z-index: 10;
+      border: 2px solid #fff;
     }
   
     .right-container img {

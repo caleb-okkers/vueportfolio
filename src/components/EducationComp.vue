@@ -1,0 +1,227 @@
+<template>
+      <div class="container">
+        <div class="row pt-5">
+          <h2 class="text">Education</h2>
+        </div>
+        <div class="row pt-5">
+          <div class="col d-flex justify-content-center">
+            <div class="timeline">
+              <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
+                <img :src=item.image alt="">
+                <div class="text-box">
+                  <h2>{{ item.institution }}</h2>
+                  <small>{{ item.year }}</small>
+                  <p>{{ item.qualification }}</p>
+                  <span :class="[index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow']"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </template>
+  
+  <script>
+  
+  export default {
+    name: 'EducationComp',
+    computed: { 
+      education () {
+        return this.$store.state.education
+      }
+    },
+    
+    mounted() {
+      this.$store.dispatch('getEducation')
+    }
+  }
+  </script>
+  
+  <style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    /* animation: movedown 2s linear forwards; */
+  
+  }
+  
+  /* .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    
+    left: 50%;
+    margin-left: -1px;
+  } */
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    /* background: linear-gradient(235deg, #B8860B, #010615, #B8860B); */
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 1;
+    animation: moveline 6s linear forwards;
+  }
+  
+  @keyframes moveline {
+    0% { 
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: movedown 1s linear forwards;
+    z-index: 5;
+    
+  }
+  
+  @keyframes movedown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .timeline-container:nth-child(1){
+    animation-delay: 0s;
+  }
+  
+  .timeline-container:nth-child(2){
+    animation-delay: 1.5s;
+  }
+  
+  .timeline-container:nth-child(3){
+    animation-delay: 2.5s;
+  }
+  
+  .timeline-container:nth-child(4){
+    animation-delay: 3.5s;
+  }
+  
+  .timeline-container.left-container {
+    left: -50%;
+  }
+  
+  .timeline-container.right-container {
+    left: 50%;
+  }
+  
+  .timeline-container img {
+      position: absolute;
+      width: 40px;
+      border-radius: 50%;
+      right: -20px;
+      top: 32px;
+      z-index: 10;
+    }
+  
+    .right-container img {
+      left: -20px;
+    }
+  
+    .left-container img {
+      left: 460px;
+    }
+  
+  .text-box {
+    padding: 20px 30px;
+    background: #000;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source:  linear-gradient(235deg, #B8860B, #010615, #B8860B);
+    width: 400px;
+  }
+  
+  .text-box h2 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  
+  .text-box small {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #B8860B;
+    right: -15px;
+  }
+  
+  .right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #B8860B;
+    left: -15px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline::before {
+      left: 31px;
+    }
+  
+    .timeline-container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .text-box {
+      font-size: 13px;
+    }
+  
+    .right-container {
+      left: 0%;
+    }
+  
+    .timeline-container img {
+      left: 10px;
+    }
+  
+    .left-container-arrow,
+    .right-container-arrow {
+      border-right: 15px solid #000;
+      border-left: 0;
+      left: -15px;
+    }
+  }
+  </style>

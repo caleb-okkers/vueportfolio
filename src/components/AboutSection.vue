@@ -31,17 +31,22 @@
     components: {
       Card
     },
-    props: {
-      about: {
-        type: Array,
-        required: true
+    computed: { 
+      about() {
+        return this.$store.state.aboutMe
       },
-      hobbies: {
-        type: Array,
-        required: true
-      }
+      hobbies() {
+        return this.$store.state.hobbies
     }
+  },
+    mounted() {
+    this.$store.dispatch('getAboutMe'),
+    this.$store.dispatch('getHobbies')
   }
+
+    }
+
+  
   </script>
   
   <style>

@@ -11,7 +11,9 @@ export default createStore({
     projects: null,
     testimonials: null,
     skills: null,
-    hobbies: null
+    hobbies: null,
+    designSkills: null,
+    softSkills: null
   },
   getters: {
   },
@@ -39,6 +41,12 @@ export default createStore({
     },
     setSkills(state,payload) {
       state.skills = payload
+    },
+    setDesignSkills(state,payload) {
+      state.designSkills = payload
+    },
+    setSoftSkills(state,payload) {
+      state.softSkills = payload
     }
   },
   actions: {
@@ -152,10 +160,38 @@ export default createStore({
           timer: 2000
         })
       }
+    },
+    async getDesignSkills(context){
+      try {
+        let {designSkills} = (await axios.get(portfolioURL)).data
+        context.commit('setDesignSkills', designSkills)
+        console.log(designSkills);
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getSoftSkills(context){
+      try {
+        let {softSkills} = (await axios.get(portfolioURL)).data
+        context.commit('setSoftSkills', softSkills)
+        console.log(softSkills);
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
     }
     
 
-
+    
 
 
 

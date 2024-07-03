@@ -5,18 +5,21 @@
             <div class="col d-flex justify-content-center">
                 <div class="tech">
                     <h4 class="pb-4">Development Arsenal</h4>
+                    <p>These are the technologies i am proficient in. With these in my locker, I'm able to build pixel-perfect functional websites.</p>
                     <p v-for="tech in skills" :key="tech.name"><span><i :class="['fa-brands', tech.icon]"></i></span> {{ tech.name }}</p>
                 </div>
             </div>
             <div class="col d-flex justify-content-center">
                 <div class="design">
                     <h4 class="pb-4">Design Tools</h4>
+                    <p>I use these platforms to plan beautiful designs or create exciting content leading to satisfying, unique user experiences. </p>
                     <p v-for="tool in designSkills" :key="tool.name"><span><img :src=tool.icon alt=""></span> {{ tool.name }}</p>
                 </div>
             </div>
             <div class="col d-flex justify-content-center">
                 <div class="soft">
                     <h4 class="pb-4">Soft Skills</h4>
+                    <p>The underrated "soft" skills. Without these my technical expertise would only take me so far. I continue to hone them alongside my tech stack."</p>
                     <p v-for="skill in softSkills" :key="skill.name">{{ skill.name }}</p>
                 </div>
             </div>
@@ -47,7 +50,7 @@ export default {
 <style scoped>
 
     .row {
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
     }
     

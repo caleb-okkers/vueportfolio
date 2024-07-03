@@ -63,7 +63,8 @@ export default {
   mounted() {
     this.$store.dispatch('getAboutMe'),
     this.$store.dispatch('getHobbies'),
-    this.$store.dispatch('getEducation')
+    this.$store.dispatch('getEducation'),
+    this.$store.dispatch('getWork')
   }
 }
 </script>

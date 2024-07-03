@@ -7,11 +7,31 @@
       <div class="col d-flex justify-content-center">
         <div class="timeline">
           <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
-            <img src="https://i.pinimg.com/originals/cd/65/15/cd6515604230d57b71983853c4156752.png" alt="">
+            <img :src=item.image alt="">
             <div class="text-box">
               <h2>{{ item.institution }}</h2>
               <small>{{ item.year }}</small>
               <p>{{ item.qualification }}</p>
+              <span :class="[index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow']"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-5">
+      <h2 class="text">Experience</h2>
+    </div>
+    <div class="row pt-5">
+      <div class="col d-flex justify-content-center">
+        <div class="timeline">
+          <div v-for="(i, index) in work" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
+            <img :src=i.image alt="">
+            <div class="text-box">
+              <h2>{{ i.company }}</h2>
+              <small>{{ i.position }}</small>
+              <small>{{ i.year }}</small>
+              <p>{{ i.description }}</p>
               <span :class="[index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow']"></span>
             </div>
           </div>
@@ -28,6 +48,10 @@ export default {
     education: {
       type: Array,
       required: true
+    },
+    work: {
+      type: Array,
+      required: true
     }
   }
 }
@@ -40,18 +64,42 @@ export default {
   position: relative;
   max-width: 1200px;
   margin: 100px auto;
-  /* animation: movedown 1s linear forwards; */
+  /* animation: movedown 2s linear forwards; */
+
 }
 
-.timeline::before {
+/* .timeline::before {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
+  
   left: 50%;
   margin-left: -1px;
+} */
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(235deg, #B8860B, #010615, #B8860B); */
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+  0% { 
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
 }
 
 .timeline-container {
@@ -61,6 +109,7 @@ export default {
   box-sizing: border-box;
   opacity: 0;
   animation: movedown 1s linear forwards;
+  z-index: 5;
   
 }
 
@@ -73,6 +122,21 @@ export default {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+.timeline-container:nth-child(1){
+  animation-delay: 0s;
+}
+
+.timeline-container:nth-child(2){
+  animation-delay: 1.5s;
+}
+
+.timeline-container:nth-child(3){
+  animation-delay: 2.5s;
+}
+
+.timeline-container:nth-child(4){
+  animation-delay: 3.5s;
 }
 
 .timeline-container.left-container {

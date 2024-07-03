@@ -90,6 +90,7 @@ export default createStore({
       try {
         let {education} = (await axios.get(portfolioURL)).data
         context.commit('setEducation', education)
+        console.log(education);
       }catch(e) {
         Swal.fire({
           title: "Error",

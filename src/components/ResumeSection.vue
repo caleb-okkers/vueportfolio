@@ -7,6 +7,7 @@
       <div class="col d-flex justify-content-center">
         <div class="timeline">
           <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
+            <img src="https://i.pinimg.com/originals/cd/65/15/cd6515604230d57b71983853c4156752.png" alt="">
             <div class="text-box">
               <h2>{{ item.institution }}</h2>
               <small>{{ item.year }}</small>
@@ -39,6 +40,7 @@ export default {
   position: relative;
   max-width: 1200px;
   margin: 100px auto;
+  /* animation: movedown 1s linear forwards; */
 }
 
 .timeline::before {
@@ -47,7 +49,7 @@ export default {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #fff;
+  background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
   left: 50%;
   margin-left: -1px;
 }
@@ -59,6 +61,7 @@ export default {
   box-sizing: border-box;
   opacity: 0;
   animation: movedown 1s linear forwards;
+  
 }
 
 @keyframes movedown {
@@ -73,12 +76,29 @@ export default {
 }
 
 .timeline-container.left-container {
-  left: 0;
+  left: -50%;
 }
 
 .timeline-container.right-container {
   left: 50%;
 }
+
+.timeline-container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+  }
+
+  .right-container img {
+    left: -20px;
+  }
+
+  .left-container img {
+    left: 460px;
+  }
 
 .text-box {
   padding: 20px 30px;
@@ -91,12 +111,14 @@ export default {
   font-family: 'Poppins', sans-serif;
   border: 3px solid;
   border-image-slice: 1;
-  border-width: 5px;
-  border-image-source: linear-gradient(to right, gold, black, gold);
+  border-width: 3px;
+  border-image-source:  linear-gradient(235deg, #B8860B, #010615, #B8860B);
+  width: 400px;
 }
 
 .text-box h2 {
   font-weight: 600;
+  font-size: 22px;
 }
 
 .text-box small {
@@ -112,7 +134,7 @@ export default {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #000;
+  border-left: 15px solid #B8860B;
   right: -15px;
 }
 
@@ -124,7 +146,7 @@ export default {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #000;
+  border-right: 15px solid #B8860B;
   left: -15px;
 }
 

@@ -336,7 +336,7 @@ body {
 }
 
 .box:hover {
-    height: 400px;
+    height: 550px !important;
 }
 
 .box:nth-child(1):hover,
@@ -425,7 +425,7 @@ body {
     flex-direction: column;
     opacity: 0;
     transition: 0.5s;
-    margin-top: 170px;
+    margin-top: 140px;
     font-family: Poppins;
     padding-bottom: 10px;
 }

@@ -4,7 +4,7 @@
         <div class="col">
           <div class="info">
             <h2 class="text">{{ info.name }}</h2>
-            <p>{{ info.text }}</p>
+            <p class="par">{{ info.text }}</p>
           </div>
         </div>
       </div>

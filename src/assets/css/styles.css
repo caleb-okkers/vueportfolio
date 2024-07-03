@@ -167,9 +167,8 @@ body {
 }
 
 #home .text {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Orbitron", monospace;
     font-optical-sizing: auto;
-    font-weight: 500;
     font-style: normal;
     font-size: 5vw;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
@@ -177,9 +176,8 @@ body {
 }
 
 #home .title {
-    font-family: "Orbitron", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: 500;
     font-style: normal;
     font-size: 2vw;
     text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
@@ -266,7 +264,7 @@ body {
 
 #about .text {
     color: #000;
-    font-family: "Orbitron", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -276,8 +274,17 @@ body {
     text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 #about p {
     color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+#about .par {
     padding-top: 2rem;
 }
 
@@ -485,7 +492,7 @@ body {
 
 #resume .text {
     color: #000;
-    font-family: "Orbitron", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -497,6 +504,10 @@ body {
 
 #resume p {
     color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
 }
 
 /* skills */
@@ -512,7 +523,7 @@ body {
 
 #skills .text {
     color: #000;
-    font-family: "Orbitron", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -524,4 +535,5 @@ body {
 
 #skills p {
     color: #fff;
+    font-family: "JetBrains Mono", monospace;
 }

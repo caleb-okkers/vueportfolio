@@ -8,6 +8,6 @@ export default {
     name: "SkillsSection"
 }
 </script>
-<style lang="">
+<style scoped>
     
 </style>

@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
+    <div class="container" id="experience-section">
       <div class="row pt-5">
         <h2 class="text">Experience</h2>
       </div>
-      <div class="row pt-5">
+      <div class="row">
         <div class="col d-flex justify-content-center">
           <div class="timeline">
             <div v-for="(i, index) in work" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
@@ -32,6 +32,21 @@
   },
     mounted() {
     this.$store.dispatch('getWork')
+
+    // Intersection Observer setup
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.timeline-container').forEach((el, index) => {
+            console.log(`Animating element with index: ${index}`); // Use index here
+            el.style.animationPlayState = 'running';
+          });
+          observer.unobserve(entry.target); // Stop observing once animation has started
+        }
+      });
+    }, { threshold: 0.1 }); // Trigger when 10% of the section is in view
+    
+    observer.observe(this.$el);
   }
   }
   </script>
@@ -88,6 +103,7 @@
     box-sizing: border-box;
     opacity: 0;
     animation: movedown 1s linear forwards;
+    animation-play-state: paused;
     z-index: 5;
     
   }

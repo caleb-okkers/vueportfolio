@@ -3,7 +3,7 @@
         <div class="row pt-5">
           <h2 class="text">Education</h2>
         </div>
-        <div class="row pt-5">
+        <div class="row">
           <div class="col d-flex justify-content-center">
             <div class="timeline">
               <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
@@ -22,32 +22,33 @@
   </template>
   
   <script>
-  export default {
-    name: 'EducationComp',
-    computed: { 
-      education() {
-        return this.$store.state.education;
-      }
-    },
-    mounted() {
-      this.$store.dispatch('getEducation');
-      
-      // Intersection Observer setup
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            document.querySelectorAll('.timeline-container').forEach((el, index) => {
-              el.style.animationPlayState = 'running';
-            });
-            observer.unobserve(entry.target); // Stop observing once animation has started
-          }
-        });
-      }, { threshold: 0.1 }); // Trigger when 10% of the section is in view
-      
-      observer.observe(this.$el);
+export default {
+  name: 'EducationComp',
+  computed: { 
+    education() {
+      return this.$store.state.education;
     }
+  },
+  mounted() {
+    this.$store.dispatch('getEducation');
+    
+    // Intersection Observer setup
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.timeline-container').forEach((el, index) => {
+            console.log(`Animating element with index: ${index}`); // Use index here
+            el.style.animationPlayState = 'running';
+          });
+          observer.unobserve(entry.target); // Stop observing once animation has started
+        }
+      });
+    }, { threshold: 0.1 }); // Trigger when 10% of the section is in view
+    
+    observer.observe(this.$el);
   }
-  </script>
+}
+</script>
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -102,7 +103,7 @@
     box-sizing: border-box;
     opacity: 0;
     animation: movedown 1s linear forwards;
-    animation-play-state: paused; /* Add this */
+    animation-play-state: paused;
     z-index: 5;
     
   }

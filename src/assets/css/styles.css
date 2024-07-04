@@ -321,6 +321,7 @@ body {
     /* background: #010615; */
     /* background: #fff; */
     width: 380px;
+    padding: 0 0 !important;
 }
 
 .box {
@@ -410,7 +411,6 @@ body {
 .box::before,
 .box::after {
     background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
-    
 }
 
 .box .content {
@@ -562,6 +562,35 @@ body {
 }
 
 #projects p {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+/* Testimonials */
+
+#testimonials {
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#testimonials .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
+    
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+#testimonials p {
     color: #fff;
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;

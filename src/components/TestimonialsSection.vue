@@ -1,25 +1,18 @@
 <template>
     <div class="container">
         <div class="row">
-            <h2 class="text">Projects</h2>
-            <p class="subtext">Have a look at some of my projects...</p>
+            <h2 class="text">Testimonials</h2>
+            <p class="subtext">What people have to say...</p>
         </div>
         <div class="row d-flex justify-content-center">
-                <Card v-for="project in projects " :key="project.name">
+                <Card v-for="test in testimonials " :key="test.name">
                     <template #img>
-                        <img :src= project.image alt="">
+                        <img :src= test.image alt="">
                     </template>
                     <template #content>
-                        <h5>{{ project.name }}</h5>
-                        <p>{{ project.description }}</p>
-                        <span>
-                            <a :href=project.github>
-                                <i class="fa-brands fa-github fa-2xl"></i>
-                            </a>
-                            <a :href=project.vercel>
-                               <img src="https://raw.githubusercontent.com/caleb-okkers/vueportfolio/16b6a8e7e2fce2e455bce1cacb5b5e84dd6e413f/src/assets/vercel-logo-svgrepo-com.svg" alt="">
-                            </a>
-                        </span>
+                        <h5>{{ test.name }}</h5>
+                        <small>{{ test.position }}</small>
+                        <p>{{ test.message }}</p>
                     </template>
         
                 </Card>
@@ -30,22 +23,23 @@
 import Card from './Card.vue'
 
 export default {
-    name: "ProjectsSection",
+    name: "TestimonialsSection",
     components: {
         Card
     },
     computed: {
-        projects() {
-          return this.$store.state.projects
+        testimonials() {
+          return this.$store.state.testimonials
         }
     },
     mounted() {
-        this.$store.dispatch('getProjects')
+        this.$store.dispatch('getTestimonials')
     }
 }
 </script>
+
 <style scoped>
-    /* .container {
+   /* .container {
         flex-wrap: wrap;
     } */
 

@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <nav class="navbar navbar-dark sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand hometext" href="#">CO</a>

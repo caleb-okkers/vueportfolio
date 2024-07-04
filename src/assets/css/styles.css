@@ -24,7 +24,7 @@ section {
     /* width: 100vw; */
 }
 
-#home, #about, #resume, #skills, #projects, #testimonials {
+#home, #about, #resume, #skills, #projects, #testimonials,#contact {
     position: relative;
     min-height: 100vh;
     transform-style: preserve-3d;
@@ -135,15 +135,15 @@ body {
 html {
     height: 100%;
     margin: 0;
-    overflow: auto; /* Change to auto or remove overflow property */
+    /* overflow: auto;  */
 }
 
 body {
     height: 100%;
     perspective: 1px;
     transform-style: preserve-3d;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto;   /* Allow vertical scrolling */
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
     background: #050505;
 }
 

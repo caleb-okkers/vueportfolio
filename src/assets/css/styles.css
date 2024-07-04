@@ -410,6 +410,7 @@ body {
 .box::before,
 .box::after {
     background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
+    
 }
 
 .box .content {

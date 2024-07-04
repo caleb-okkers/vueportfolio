@@ -4,8 +4,7 @@
             <h2 class="text">Projects</h2>
             <p class="subtext">Have a look at some of my projects...</p>
         </div>
-        <div class="row">
-            <div class="col col-md-6 col-sm-12">
+        <div class="row d-flex justify-content-center">
                 <Card v-for="project in projects " :key="project.name">
                     <template #img>
                         <img :src= project.image alt="">
@@ -14,13 +13,16 @@
                         <h5>{{ project.name }}</h5>
                         <p>{{ project.description }}</p>
                         <span>
-                            <i class="fa-brands fa-github"></i>
-                            <img src="" alt="">
+                            <a :href=project.github>
+                                <i class="fa-brands fa-github fa-2xl"></i>
+                            </a>
+                            <a :href=project.vercel>
+                               <img src="https://raw.githubusercontent.com/caleb-okkers/vueportfolio/16b6a8e7e2fce2e455bce1cacb5b5e84dd6e413f/src/assets/vercel-logo-svgrepo-com.svg" alt="">
+                            </a>
                         </span>
                     </template>
         
                 </Card>
-            </div>
         </div>
     </div>
 </template>
@@ -31,9 +33,223 @@ export default {
     name: "ProjectsSection",
     components: {
         Card
+    },
+    computed: {
+        projects() {
+          return this.$store.state.projects
+        }
+    },
+    mounted() {
+        this.$store.dispatch('getProjects')
     }
 }
 </script>
-<style lang="">
+<style scoped>
+    /* .container {
+        flex-wrap: wrap;
+    } */
+
+    span img {
+      width: 30px;
+      border-radius: 50%;
+      /* border: 2px solid #fff; */
+    }
+
+    span a i {
+        /* width: 30px; */
+        color: #fff;
+    }
+
+    .card-div {
+        width: 30%;
+    }
+
+    .box:hover {
+        height: 400px !important;
+    }
+
+    /* cards */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.card-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 2rem; */
+    /*min-height: 100vh; */
+    /* background: #010615; */
+    /* background: #fff; */
+    width: 380px;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background: #000;
+    transition: 0.5s;
+}
+
+.box:nth-child(1):hover,
+.box:nth-child(2):hover,
+.box:nth-child(3):hover {
+    height: 520px;
+}
+
+.box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.box .imgBx img {
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.box:hover .imgBx img {
+    opacity: 1;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+
+}
+
+/*.box::before,
+.box::after {
+    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3):after {
+    background: linear-gradient(235deg, #772aff, #010615, #2196F3);
+}*/
+
+.box::before,
+.box::after {
+    background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
     
+}
+
+.box .content {
+    /* position: absolute; */
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.5s;
+    margin-top: 10px !important;
+    padding-bottom: 10px;
+}
+
+.box:hover .content {
+    opacity: 1;
+    padding: 10px;
+}
+
+.box .content h5 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.box .content p {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 2px;
+    /* padding-bottom: 10px;  not working */
+}
+
+.box .content {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+
+@media (max-width: 330px) {
+    .box {
+        height: 230px;
+    }
+
+    .box:hover {
+        height: 330px;
+    }
+
+    .box .content h5 {
+        font-size: 16px;
+    }
+
+    .box .content h5 span {
+        font-size: 12px;
+    }
+
+
+}
 </style>

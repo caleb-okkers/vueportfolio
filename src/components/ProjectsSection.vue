@@ -1,13 +1,15 @@
 <template>
     <div class="container">
-        <div class="row">
+        <div class="row pt-5">
             <h2 class="text">Projects</h2>
-            <p class="subtext">Have a look at some of my projects...</p>
+            <p class="subtext pt-5">Have a look at some of my projects...</p>
         </div>
         <div class="row d-flex justify-content-center">
-                <Card v-for="project in projects " :key="project.name">
+                <Card v-for="project in projects " :key="project.name"  styleType="projects-style">
                     <template #img>
-                        <img :src= project.image alt="">
+                        <a :href= project.vercel target="_blank">
+                            <img :src= project.image alt="project" loading="lazy">
+                        </a>
                     </template>
                     <template #content>
                         <h5>{{ project.name }}</h5>
@@ -17,7 +19,7 @@
                                 <i class="fa-brands fa-github fa-2xl"></i>
                             </a>
                             <a :href= project.vercel target="_blank">
-                               <img src="https://raw.githubusercontent.com/caleb-okkers/vueportfolio/16b6a8e7e2fce2e455bce1cacb5b5e84dd6e413f/src/assets/vercel-logo-svgrepo-com.svg" alt="">
+                               <img src="https://raw.githubusercontent.com/caleb-okkers/vueportfolio/16b6a8e7e2fce2e455bce1cacb5b5e84dd6e413f/src/assets/vercel-logo-svgrepo-com.svg" alt="vercel" loading="lazy">
                             </a>
                         </span>
                     </template>
@@ -111,11 +113,6 @@ export default {
     transition: 0.5s;
 }
 
-.box:nth-child(1):hover,
-.box:nth-child(2):hover,
-.box:nth-child(3):hover {
-    height: 520px;
-}
 
 .box .imgBx {
     position: absolute;
@@ -181,8 +178,17 @@ export default {
 
 .box::before,
 .box::after {
-    background: linear-gradient(235deg, #B8860B, #050505, #B8860B);
-    
+    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3):after {
+    background: linear-gradient(235deg, #772aff, #010615, #2196F3);
 }
 
 .box .content {

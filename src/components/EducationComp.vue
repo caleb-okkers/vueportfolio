@@ -7,7 +7,7 @@
           <div class="col d-flex justify-content-center">
             <div class="timeline">
               <div v-for="(item, index) in education" :key="index" :class="['timeline-container', index % 2 === 0 ? 'left-container' : 'right-container']">
-                <img :src=item.image alt="">
+                <img :src=item.image alt="logo" loading="lazy">
                 <div class="text-box">
                   <h2>{{ item.institution }}</h2>
                   <small>{{ item.year }}</small>
@@ -172,9 +172,30 @@ export default {
     border: 3px solid;
     border-image-slice: 1;
     border-width: 3px;
-    border-image-source:  linear-gradient(235deg, #B8860B, #010615, #B8860B);
+    border-image-source:  linear-gradient(235deg, #B8860B, #b6b2b2, #B8860B);
     width: 400px;
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
   }
+
+  .text-box::before,
+.text-box::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(40px);
+}
+
+.text-box::before {
+    left: -10px;
+    bottom: -10px;
+}
+
+.text-box::after {
+    right: -10px;
+    top: -10px;
+}
   
   .text-box h2 {
     font-weight: 600;

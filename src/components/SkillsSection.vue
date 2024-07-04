@@ -1,7 +1,10 @@
 <template>
     <div class="container">
-        <h2 class="text">Skills</h2>
+        <div class="row pt-5">
+            <h2 class="text">Skills</h2>
+        </div>
         <div class="row d-flex justify-content-center pt-5">
+            
             <div class="col d-flex justify-content-center">
                 <div class="tech">
                     <h4 class="pb-4">Development Arsenal</h4>
@@ -13,7 +16,7 @@
                 <div class="design">
                     <h4 class="pb-4">Design Tools</h4>
                     <p>I use these platforms to plan beautiful designs or create exciting content leading to satisfying, unique user experiences. </p>
-                    <p v-for="tool in designSkills" :key="tool.name"><span><img :src=tool.icon alt=""></span> {{ tool.name }}</p>
+                    <p v-for="tool in designSkills" :key="tool.name"><span><img :src=tool.icon alt="logo" loading="lazy"></span> {{ tool.name }}</p>
                 </div>
             </div>
             <div class="col d-flex justify-content-center">

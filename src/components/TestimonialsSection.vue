@@ -1,18 +1,18 @@
 <template>
     <div class="container">
-        <div class="row">
+        <div class="row pt-5">
             <h2 class="text">Testimonials</h2>
-            <p class="subtext">What people have to say...</p>
+            <p class="subtext pt-5">What people have to say...</p>
         </div>
         <div class="row d-flex justify-content-center">
-                <Card v-for="test in testimonials " :key="test.name">
+                <Card v-for="test in testimonials " :key="test.name" styleType="test-style">
                     <template #img>
-                        <img :src= test.image alt="">
+                        <img :src= test.image alt="colleague" loading="lazy">
                     </template>
                     <template #content>
                         <h5>{{ test.name }}</h5>
                         <small>{{ test.position }}</small>
-                        <p>{{ test.message }}</p>
+                        <p class="pt-3">{{ test.message }}</p>
                     </template>
         
                 </Card>

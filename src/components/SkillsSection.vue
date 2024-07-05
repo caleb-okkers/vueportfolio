@@ -70,8 +70,8 @@ export default {
 }
 
 .skills-heading {
-  color: #ff0000;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px #ff6a00;
+  color: #ff005e;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
 }
 
     .row {
@@ -124,7 +124,7 @@ export default {
     top: 100%; 
     width: 100%;
     height: 100vh; 
-    background: linear-gradient(to bottom, #ff0000, #ff6a00); 
+    background: linear-gradient(to bottom, #ff005e, rgba(251, 255, 0)); 
     animation: moveDown 3s forwards; 
 }
 

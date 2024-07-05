@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <video autoplay loop muted playsinline class="video-background" id="bgVideo">
-      <source src="https://videos.pexels.com/video-files/3129977/3129977-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4">
       Your browser does not support the video tag.
       
     </video>
@@ -113,7 +113,7 @@ export default {
     font-style: normal;
     font-size: 4rem;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
-    text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.5);
     
 }
 
@@ -122,7 +122,7 @@ export default {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 1.8rem;
-    text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
 
 #home .home-image img {
@@ -136,8 +136,8 @@ export default {
 
 .home-image {
     position: relative;
-    width: 410px;
-    height: 410px;
+    width: 400px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +192,7 @@ export default {
 
 .home-image::before,
 .home-image::after {
-    background: linear-gradient(235deg, #B8860B, #050505, #B8860B);
+    background: linear-gradient(235deg, cyan, #050505, cyan);
 }
 
 

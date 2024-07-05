@@ -1,7 +1,7 @@
 <template>
     <div class="container" id="experience-section">
       <div class="row pt-5">
-        <h2 class="resume-heading headings">Experience</h2>
+        <h2 class="exp-heading headings">Experience</h2>
       </div>
       <div class="row">
         <div class="col d-flex justify-content-center">
@@ -54,9 +54,9 @@
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-  .resume-heading {
-  color: #fff;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
+  .exp-heading {
+  color: #89ff00;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px #00bcd4;
 }
   
   .timeline {
@@ -177,10 +177,17 @@
     border: 3px solid;
     border-image-slice: 1;
     border-width: 3px;
-    border-image-source:  linear-gradient(235deg, #B8860B, #b6b2b2, #B8860B);
+    border-image-source:  linear-gradient(235deg, #89ff00, #b6b2b2, #89ff00);
     width: 400px;
-    box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
+    box-shadow: 0 0 10px #00bcd4;
   }
+
+
+  .text-box:hover {
+
+transition: 0.5s;
+transform: scale(1.03);
+}
 
   .text-box::before,
 .text-box::after {
@@ -221,7 +228,7 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #B8860B;
+    border-left: 15px solid #89ff00;
     right: -15px;
   }
   
@@ -233,9 +240,10 @@
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #B8860B;
+    border-right: 15px solid #89ff00;
     left: -15px;
   }
+ 
   
   @media screen and (max-width: 600px) {
     .timeline::before {

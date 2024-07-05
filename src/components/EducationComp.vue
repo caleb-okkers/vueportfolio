@@ -1,7 +1,7 @@
 <template>
       <div class="container" id="education-section">
         <div class="row pt-5">
-          <h2 class="resume-heading headings">Education</h2>
+          <h2 class="edu-heading headings">Education</h2>
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
@@ -53,9 +53,9 @@ export default {
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-  .resume-heading {
-  color: #fff;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
+  .edu-heading {
+  color: #772aff;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px #2196F3;
 }
   
   .timeline {
@@ -177,10 +177,16 @@ export default {
     border: 3px solid;
     border-image-slice: 1;
     border-width: 3px;
-    border-image-source:  linear-gradient(235deg, #B8860B, #b6b2b2, #B8860B);
+    border-image-source:  linear-gradient(235deg, #772aff, #b6b2b2, #772aff);
     width: 400px;
-    box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
+    box-shadow: 0 0 10px #2196F3;
   }
+
+.text-box:hover {
+
+transition: 0.5s;
+transform: scale(1.03);
+}
 
   .text-box::before,
 .text-box::after {
@@ -220,7 +226,7 @@ export default {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #B8860B;
+    border-left: 15px solid #772aff;
     right: -15px;
   }
   
@@ -232,7 +238,7 @@ export default {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #B8860B;
+    border-right: 15px solid #772aff;
     left: -15px;
   }
   

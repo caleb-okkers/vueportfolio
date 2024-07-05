@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row pt-5">
-            <h2 class="text">Skills</h2>
+            <h2 class="skills-heading headings">Skills</h2>
         </div>
         <div class="row d-flex justify-content-center pt-5">
             
@@ -51,6 +51,11 @@ export default {
 }
 </script>
 <style scoped>
+
+.skills-heading {
+  color: #ff0000;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px #ff6a00;
+}
 
     .row {
         width: 70%;

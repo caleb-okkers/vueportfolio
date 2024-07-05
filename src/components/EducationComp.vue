@@ -1,7 +1,7 @@
 <template>
       <div class="container" id="education-section">
         <div class="row pt-5">
-          <h2 class="text">Education</h2>
+          <h2 class="resume-heading headings">Education</h2>
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
@@ -52,6 +52,11 @@ export default {
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  .resume-heading {
+  color: #fff;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
+}
   
   .timeline {
     position: relative;

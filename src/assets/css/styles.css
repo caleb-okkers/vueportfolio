@@ -135,15 +135,15 @@ body {
 html {
     height: 100%;
     margin: 0;
-    /* overflow: auto;  */
+    overflow: auto; 
 }
 
 body {
     height: 100%;
     perspective: 1px;
     transform-style: preserve-3d;
-    /* overflow-x: hidden; */
-    /* overflow-y: auto; */
+    overflow-x: hidden;
+    overflow-y: auto;
     background: #050505;
 }
 
@@ -197,7 +197,7 @@ body {
     font-family: "Orbitron", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 5vw;
+    font-size: 4rem;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
     text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
@@ -206,7 +206,7 @@ body {
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 2vw;
+    font-size: 1.8rem;
     text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
 
@@ -277,6 +277,13 @@ body {
 .home-image::before,
 .home-image::after {
     background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
+}
+
+.headings {
+    font-family: "Orbitron", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 3rem;
 }
 
 /* about */
@@ -453,7 +460,7 @@ body {
 /* contact */
 
 #contact {
-    background: #050505;
+    background: #000;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -472,11 +479,32 @@ body {
     text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
 }
 
-#contact p {
+#contact p,
+#contact label {
     color: #fff;
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
     font-style: normal;
+}
+
+#contact input,
+#contact textarea {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+    border-radius: 0px 20px;
+}
+
+#contact button {
+    /* background-color: rgb(143, 232, 232); */
+    background-color: #fff;
+    /* border-color: #fff; */
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-shadow: 0 0 15px cyan;
 }
 

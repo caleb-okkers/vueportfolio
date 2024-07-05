@@ -3,7 +3,7 @@
     <div class="row pt-5" v-for="info in about" :key="info.name">
       <div class="col">
         <div class="info">
-          <h2 class="text">{{ info.name }}</h2>
+          <h2 class="about-heading headings">{{ info.name }}</h2>
           <p class="par">{{ info.text }}</p>
         </div>
       </div>
@@ -78,6 +78,16 @@ export default {
     font-family: 'Poppins', sans-serif;
 } */
 
+.about-heading {
+  color: #ff005e;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
+}
+
+/* .about-heading:nth-child(2) {
+  color: #fbff00;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0, 0.5);
+} */
+
 .hobbies {
     display: flex;
     justify-content: center;
@@ -106,6 +116,7 @@ export default {
 .box:hover .imgBx img {
     opacity: 1;
 }
+
 
 
   </style>

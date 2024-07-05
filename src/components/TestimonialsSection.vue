@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row pt-5">
-            <h2 class="text">Testimonials</h2>
+            <h2 class="test-heading headings">Testimonials</h2>
             <p class="subtext pt-5">What people have to say...</p>
         </div>
         <div class="row d-flex justify-content-center">
@@ -66,12 +66,10 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-} */
+.test-heading {
+  color: #89ff00;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px #00bcd4;
+}
 
 .container {
     display: flex;

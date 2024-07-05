@@ -111,7 +111,7 @@ export default {
     max-width: 100%;
     opacity: 0.1;
     transition: 0.5s;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .box:hover .imgBx img {
@@ -166,7 +166,7 @@ export default {
     } */
     
     .box .content {
-        /* position: absolute; */
+        /* position: ; */
         bottom: 0;
         left: 10px;
         right: 10px;
@@ -213,25 +213,7 @@ export default {
 }
 
 
-@media (max-width: 330px) {
-    .box {
-        height: 230px;
-    }
-    
-    .box:hover {
-        height: 330px;
-    }
-    
-    .box .content h5 {
-        font-size: 16px;
-    }
-    
-    .box .content h5 span {
-        font-size: 12px;
-    }
-    
-    
-}
+
 
 /* about */
 

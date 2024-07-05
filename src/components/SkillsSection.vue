@@ -5,22 +5,30 @@
         </div>
         <div class="row d-flex justify-content-center pt-5">
             
-            <div class="col d-flex justify-content-center">
-                <div class="tech">
+            <div class="col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
+                <div class="tech skill-divs">
                     <h4 class="pb-4">Development Arsenal</h4>
                     <p>These are the technologies i am proficient in. With these in my locker, I'm able to build pixel-perfect functional websites.</p>
                     <p v-for="tech in skills" :key="tech.name"><span><i :class="['fa-brands', tech.icon]"></i></span> {{ tech.name }}</p>
                 </div>
+                <div class="line-container">
+        <div class="line"></div>
+    </div>
+
             </div>
-            <div class="col d-flex justify-content-center">
-                <div class="design">
+            <div class="col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
+                <div class="design skill-divs">
                     <h4 class="pb-4">Design Tools</h4>
                     <p>I use these platforms to plan beautiful designs or create exciting content leading to satisfying, unique user experiences. </p>
                     <p v-for="tool in designSkills" :key="tool.name"><span><img :src=tool.icon alt="logo" loading="lazy"></span> {{ tool.name }}</p>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center">
-                <div class="soft">
+            <div class="col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
+                <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+                <div class="soft skill-divs">
                     <h4 class="pb-4">Soft Skills</h4>
                     <p>The underrated "soft" skills. Without these my technical expertise would only take me so far. I continue to hone them alongside my tech stack."</p>
                     <p v-for="skill in softSkills" :key="skill.name">{{ skill.name }}</p>
@@ -51,6 +59,15 @@ export default {
 }
 </script>
 <style scoped>
+
+.container {
+    flex-wrap: wrap;
+}
+
+.skill-divs::before,
+.skill-divs::after {
+    background: linear-gradient(235deg, #ff0000, #050505, #ff6a00);
+}
 
 .skills-heading {
   color: #ff0000;
@@ -86,4 +103,57 @@ export default {
     font-size: 1.5rem;
     /* text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3); */
     }
+
+    /* .design {
+        border-left: #ff0000;
+        border-right: #ff0000;
+        
+    } */
+
+    /* line */
+
+.line-container {
+    position: relative;
+    width: 8px;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    top: 100%; 
+    width: 100%;
+    height: 100vh; 
+    background: linear-gradient(to bottom, #ff0000, #ff6a00); 
+    animation: moveDown 3s forwards; 
+}
+
+@keyframes moveDown {
+    to {
+        top: 0; 
+    }
+}
+
+
+
+.soft {
+    padding-left: 24px;
+}
+
+@media (max-width: 600px) {
+    .line-container {
+    position: relative;
+    width: 4px; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+    .skill-divs {
+        width: 100%;
+    }
+
+    .row.d-flex.justify-content-center .col-md-4 {
+    margin-bottom: 20px; /* Adjust margin between columns */
+  }
+}
 </style>

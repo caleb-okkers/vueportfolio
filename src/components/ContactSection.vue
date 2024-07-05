@@ -17,7 +17,7 @@
             </div>
             <div class="col">
                 <div class="form-div container pb-5">
-                            <form class="mt-5" action="https://formspree.io/f/xgegrwwd" method="POST">
+                            <form class="mt-5" action="https://formspree.io/f/mzzpbkpy" method="POST">
                                 <div class="contact-label-div mb-3">
                                     <label for="name" class="form-label contact-label">Name</label>
                                     <input type="text" class="form-control" id="name" placeholder="Enter your name"
@@ -36,6 +36,21 @@
                                 <button type="submit" class="btn custom-submit-button btn-outline-success"><span>Submit</span></button>
                             </form>
                         </div>
+                        <div class="more">
+                    <p>Reach out via...</p>
+                </div>
+
+                <div class="socials">
+                    <a id="profile-link" href="https://github.com/caleb-okkers" target="_blank" class="btn contact-details">
+                        <i class="fab fa-github fa-2xl"></i>
+                         GitHub
+                    </a>
+
+                    <a id="profile-link" href="https://www.linkedin.com/in/caleb-okkers-43b100287" target="_blank" class="btn contact-details">
+                        <i class="fab fa-linkedin fa-2xl"></i>
+                         LinkedIn
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -58,6 +73,8 @@ export default {
 //             video.currentTime = 0;
 //             video.play();
 //         });
+
+
 </script>
 
 <style scoped>
@@ -82,6 +99,8 @@ iframe {
 
 .form-div {
     width: 600px;
-    height: 600px;
+    height: 450px;
 }
+
+
 </style>

@@ -66,7 +66,7 @@ export default createStore({
     async getAboutMe(context){
       try {
         let {aboutMe} =  (await axios.get(portfolioURL)).data
-        console.log(aboutMe);
+        
         context.commit('setAboutMe', aboutMe)
       }catch(e) {
         Swal.fire({
@@ -84,7 +84,7 @@ export default createStore({
       try {
         let {hobbies} = (await axios.get(portfolioURL)).data
         context.commit('setHobbies', hobbies)
-        console.log(hobbies);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -98,7 +98,7 @@ export default createStore({
       try {
         let {education} = (await axios.get(portfolioURL)).data
         context.commit('setEducation', education)
-        console.log(education);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -112,7 +112,7 @@ export default createStore({
       try {
         let {work} = (await axios.get(portfolioURL)).data
         context.commit('setWork', work)
-        console.log(work);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -139,7 +139,7 @@ export default createStore({
       try {
         let {projects} = (await axios.get(portfolioURL)).data
         context.commit('setProjects', projects)
-        console.log(projects);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -153,7 +153,7 @@ export default createStore({
       try {
         let {testimonials} = (await axios.get(portfolioURL)).data
         context.commit('setTestimonials', testimonials)
-        console.log(testimonials);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -167,7 +167,7 @@ export default createStore({
       try {
         let {designSkills} = (await axios.get(portfolioURL)).data
         context.commit('setDesignSkills', designSkills)
-        console.log(designSkills);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -181,7 +181,7 @@ export default createStore({
       try {
         let {softSkills} = (await axios.get(portfolioURL)).data
         context.commit('setSoftSkills', softSkills)
-        console.log(softSkills);
+        
       }catch(e) {
         Swal.fire({
           title: "Error",
@@ -235,3 +235,5 @@ export default createStore({
   modules: {
   }
 })
+
+

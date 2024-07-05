@@ -242,7 +242,7 @@ export default {
     }
   
     .timeline-container {
-      width: 100%;
+      width: 80%;
       padding-left: 70px;
       padding-right: 25px;
     }
@@ -261,7 +261,6 @@ export default {
   
     .left-container-arrow,
     .right-container-arrow {
-      border-right: 15px solid #000;
       border-left: 0;
       left: -15px;
     }

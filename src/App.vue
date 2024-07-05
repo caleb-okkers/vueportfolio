@@ -2,7 +2,6 @@
   <div class="wrapper">
     <NavBar/>
     <main>
-      
       <router-view/>
     </main>
     <Footer/>

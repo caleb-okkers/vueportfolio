@@ -1,7 +1,8 @@
 <template>
+  
     <nav class="navbar navbar-dark sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand hometext" href="#">CO</a>
+        <a class="navbar-brand hometext" href="#home">CO.</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -59,5 +60,29 @@
   <script>
   export default {};
   </script>
-  <style scoped></style>
+  <style scoped>
+ .nav-link {
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-left: 2rem;
+  
+ }
+
+ .navbar {
+  height: 10vh
+ }
+
+ .hometext {
+  font-size: 1.3rem;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2rem;
+  margin-left: 2rem;
+ }
+</style>
   

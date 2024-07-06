@@ -1,20 +1,26 @@
 <template>
-  <div class="container">
+  <div class="container d-flex justify-content-center align-items-center">
     <video autoplay loop muted playsinline class="video-background" id="bgVideo">
       <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4">
       Your browser does not support the video tag.
       
     </video>
-    <div class="row d-flex justify-content-center">
-      <div class="content">
-        <h1 class="text pt-3">Caleb Okkers</h1>
-        <h3 v-if="title" class="title">
-          <span>{{ title }}</span>
-        </h3>
-        <Spinner v-else />
+    <div class="row d-flex justify-content-center align-items-center pb-5">
+      <div class="col d-flex justify-content-center pb-5">
         <div class="home-image">
           <img src="https://github.com/caleb-okkers/coolCards/blob/master/images/IMG_2711onetooneratio.jpg?raw=true" alt="Caleb Okkers" loading="lazy">
         </div>
+
+      </div>
+      <div class="col d-flex justify-content-center align-items-center pb-5">
+        <div class="content">
+          <h1 class="text">Caleb Okkers</h1>
+          <h3 v-if="title" class="title">
+            <span>{{ title }}</span>
+          </h3>
+          <Spinner v-else />
+        </div>
+        
       </div>
 
     </div>
@@ -96,6 +102,10 @@ export default {
     
 }
 
+.row {
+  width: 70%;
+}
+
 #home .content {
     position: absolute;
     text-align: center;
@@ -125,26 +135,28 @@ export default {
     text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
 
+
+
 #home .home-image img {
-    width: 400px;
+    width: 450px;
     height: auto;
     /* margin-top: 20px; */
     /* border-radius: 10%; */
-    padding: 10px;
+    padding: 0px;
     opacity: 0.85;
 }
 
 .home-image {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 455px;
+    height: 455px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    transition: 0.5s;
     background: #000;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .home-image::before {
@@ -155,8 +167,9 @@ export default {
     right: -2px;
     bottom: -2px;
     background: #fff;
-    z-index: -1;
-
+    z-index: 0;
+    /* width: 452px;
+    height: 452px; */
 }
 
 .home-image::after {
@@ -169,10 +182,12 @@ export default {
     background: #fff;
     z-index: -2;
     filter: blur(40px);
+    /* width: 452px;
+    height: 452px; */
 
 }
 
-.home-image .profile {
+/* .home-image .profile {
     position: absolute;
     top: 0;
     left: 0;
@@ -181,7 +196,7 @@ export default {
     padding: 10px;
     box-sizing: border-box;
     overflow: hidden;
-}
+} */
 
 .home-image .profile img {
     max-width: 100%;
@@ -192,7 +207,7 @@ export default {
 
 .home-image::before,
 .home-image::after {
-    background: linear-gradient(235deg, cyan, #050505, cyan);
+    background: linear-gradient(235deg, cyan, #050505, cyan) !important;
 }
 
 

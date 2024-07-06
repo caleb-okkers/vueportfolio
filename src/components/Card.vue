@@ -139,7 +139,7 @@ export default {
     bottom: -2px;
     background: #fff;
     z-index: -2;
-    filter: blur(40px);
+    filter: blur(20px);
     
 }
 

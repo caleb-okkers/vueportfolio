@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="resume">
     <Education/>
     <Experience/>
   </div>
@@ -18,6 +18,10 @@ export default {
 }
 </script>
 
-<style scoped>
 
+<style scoped>
+   .resume {
+    margin: 0;
+    padding: 0;
+   }
 </style>

@@ -7,9 +7,7 @@
         <div class="row d-flex justify-content-center">
                 <Card v-for="project in projects " :key="project.name"  styleType="projects-style">
                     <template #img>
-                        <a :href= project.vercel target="_blank">
                             <img :src= project.image alt="project" loading="lazy">
-                        </a>
                     </template>
                     <template #content>
                         <h5>{{ project.name }}</h5>

@@ -12,8 +12,11 @@
                    Your browser does not support the video tag.
             
                 </video> -->
+                <div class="spline-contact">
 
-                <iframe src='https://my.spline.design/cybermannequin-013efb57449009f300fec795056b9482/' frameborder='0' width='100%' height='100%'></iframe>
+                    
+                    <iframe src='https://my.spline.design/cybermannequin-013efb57449009f300fec795056b9482/' frameborder='0' width='100%' height='100%'></iframe>
+                </div>
             </div>
             <div class="col">
                 <div class="form-div container pb-5">
@@ -102,5 +105,28 @@ iframe {
     height: 450px;
 }
 
+@media (max-width:400px) {
+
+    iframe {
+        width: 300px;
+        height: 300px
+    }
+
+    .form-div {
+        width: 100% !important;
+        margin: 0 12px;
+        padding-left: 0px ;
+    }
+
+    .spline-contact {
+        width: 100% !important;
+        padding-right: 12px;
+        
+    }
+
+    .socials {
+        padding-bottom: 1rem;
+    }
+}
 
 </style>

@@ -246,22 +246,37 @@ transform: scale(1.03);
  
   
   @media screen and (max-width: 600px) {
+    .timeline {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
     .timeline::before {
-      left: 31px;
+      left: 1rem;
     }
   
     .timeline-container {
       width: 100%;
-      padding-left: 70px;
+      padding-left: 0px;
       padding-right: 25px;
+    }
+
+    .timeline-container .left-container,
+    .timeline-container .right-container {
+      width: 20vw !important;
+      left: 0;;
     }
   
     .text-box {
-      font-size: 13px;
+      font-size: 12px;
+      width: 50vw;
     }
   
     .right-container {
-      left: 0%;
+      left: 0;
     }
   
     .timeline-container img {
@@ -270,9 +285,13 @@ transform: scale(1.03);
   
     .left-container-arrow,
     .right-container-arrow {
-      border-right: 15px solid #000;
+      border-right: 15px solid #89ff00;
       border-left: 0;
       left: -15px;
+    }
+
+    .timeline::after {
+      left: 0;
     }
   }
   </style>

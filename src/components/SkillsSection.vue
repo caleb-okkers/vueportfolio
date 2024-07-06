@@ -155,5 +155,9 @@ export default {
     .row.d-flex.justify-content-center .col-md-4 {
     margin-bottom: 20px; /* Adjust margin between columns */
   }
+
+  @media (max-width:400px) {
+  
+}
 }
 </style>

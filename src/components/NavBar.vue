@@ -309,6 +309,44 @@ a:hover i,
 a:hover {
   color: rgb(21, 200, 200);
 }
+
+@media (max-width: 400px) {
+   .navbar {
+    width: 100vw;
+   }
+
+   .container-fluid {
+    width: 100%;
+   }
+
+   .nav-link {
+
+font-size: 1rem;
+margin-left: 1rem;
+margin-bottom: 1rem;
+}
+
+.offcanvas {
+  max-width: 70vw;
+
+}
+
+.hometext {
+font-size: 1.3rem;
+margin-left: 1.3rem;
+}
+
+.ul {
+  width: 100%;
+  right: 0;
+}
+
+.navbar-toggler-icon {
+  width: 1em;
+  height: 1em;
+}
+}
+
 </style>
 
   

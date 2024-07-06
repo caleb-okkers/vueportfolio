@@ -211,5 +211,52 @@ export default {
 }
 
 
+@media (max-width:400px) {
+  
+  #home .home-image img {
+    width: 250px;
+    height: auto;
+    /* margin-top: 20px; */
+    /* border-radius: 10%; */
+    padding: 0px;
+    opacity: 0.85;
+}
+
+.home-image {
+    position: relative;
+    width: 252px;
+    height: 252px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: #000;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: -10rem;
+}
+
+.content {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+}
+
+#home .text {
+    font-size: 2rem;
+    padding-top: 5rem;
+    width: 100%;
+    width: 80vw;
+}
+
+#home .title {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    width: 80vw;
+}
+}
+
 </style>
 

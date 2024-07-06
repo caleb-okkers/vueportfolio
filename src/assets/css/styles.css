@@ -106,7 +106,32 @@ footer p {
         display: block;
         height: auto;
     }
+
+    .container {
+        width: 100vw !important;
+    }
 }
+
+@media (max-width:400px) {
+    .container {
+        width: 100vw !important;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .headings {
+        font-size: 2rem;
+    }
+
+}
+/* 
+img {
+    aspect-ratio: 1;
+    
+} */
+
 
 /* home */
 

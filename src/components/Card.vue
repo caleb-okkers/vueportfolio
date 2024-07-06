@@ -257,4 +257,69 @@ export default {
 }
 
 
+/* @media (max-width:400px) {
+  
+} */
+
+@media (max-width: 330px) {
+    .box {
+        /* height: 230px; */
+        width: 230px;
+        height: 230px;
+    }
+
+    
+    .box .content h2 {
+        font-size: 16px;
+    }
+    
+    .box .content h2 span {
+        font-size: 12px;
+    }
+
+    .profileBox {
+        height: 230px !important;
+    }
+
+    .profile {
+        height: 230px;
+    }
+
+    /* about */
+
+.box:hover.about-style {
+    height: 520px !important;
+}
+
+.box .content.about-style {
+        margin-top: 30px !important;
+    }
+
+/* projects */
+.box:hover.projects-style {
+    height: 400px !important;
+}
+
+.box .content.projects-style {
+        margin-top: 150px !important;
+    }
+
+/* testimonials */
+.box:hover.test-style {
+    height: 720px !important;
+}
+
+.box .content.test-style {
+        margin-top: -30px !important;
+        font-size: 12px;
+    }
+
+    .box .imgBx img {
+    opacity: 0.1;
+    transition: 0.5s;
+    overflow: hidden !important;
+}
+
+}
+
 </style>

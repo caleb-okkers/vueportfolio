@@ -117,6 +117,14 @@ export default {
     opacity: 1;
 }
 
+@media (max-width:400px) {
+
+    .headings {
+        font-size: 2rem;
+    }
+
+}
+
 
 
   </style>

@@ -211,7 +211,7 @@ export default {
 }
 
 
-@media (max-width:400px) {
+@media (max-width:475px) {
   
   #home .home-image img {
     width: 250px;
@@ -220,6 +220,10 @@ export default {
     /* border-radius: 10%; */
     padding: 0px;
     opacity: 0.85;
+}
+
+#home {
+  flex-direction: column;
 }
 
 .home-image {

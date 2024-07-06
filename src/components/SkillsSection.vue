@@ -156,7 +156,7 @@ export default {
     margin-bottom: 20px; /* Adjust margin between columns */
   }
 
-  @media (max-width:400px) {
+  @media (max-width:475px) {
   
 }
 }

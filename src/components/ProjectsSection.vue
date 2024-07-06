@@ -242,23 +242,4 @@ export default {
 }
 
 
-@media (max-width: 330px) {
-    .box {
-        height: 230px;
-    }
-
-    .box:hover {
-        height: 330px;
-    }
-
-    .box .content h5 {
-        font-size: 16px;
-    }
-
-    .box .content h5 span {
-        font-size: 12px;
-    }
-
-
-}
 </style>

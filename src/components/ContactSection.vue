@@ -105,7 +105,7 @@ iframe {
     height: 450px;
 }
 
-@media (max-width:400px) {
+@media (max-width:475px) {
 
     iframe {
         width: 300px;

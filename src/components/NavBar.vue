@@ -310,7 +310,7 @@ a:hover {
   color: rgb(21, 200, 200);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 475px) {
    .navbar {
     width: 100vw;
    }

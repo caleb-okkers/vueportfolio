@@ -123,7 +123,7 @@ export default {
     font-style: normal;
     font-size: 4rem;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
-    text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.7);
     
 }
 
@@ -131,8 +131,8 @@ export default {
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px cyan, 5px 5px 70px rgba(255, 255, 255, 0.7);
 }
 
 
@@ -207,7 +207,7 @@ export default {
 
 .home-image::before,
 .home-image::after {
-    background: linear-gradient(235deg, cyan, #050505, cyan) !important;
+    background: linear-gradient(235deg, #000, #050505, cyan) !important;
 }
 
 

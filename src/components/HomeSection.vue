@@ -211,20 +211,20 @@ export default {
 }
 
 
-@media (max-width:475px) {
+@media (max-width: 475px) {
   
   #home .home-image img {
     width: 250px;
-    height: auto;
+    height: 250px;
     /* margin-top: 20px; */
     /* border-radius: 10%; */
     padding: 0px;
     opacity: 0.85;
 }
 
-#home {
+/* #home {
   flex-direction: column;
-}
+} */
 
 .home-image {
     position: relative;

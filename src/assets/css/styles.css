@@ -101,7 +101,7 @@ footer p {
 
 /* media query */
 
-@media (width < 800px) {
+@media (max-width: 800px) {
     #home .row {
         display: block;
         height: auto;
@@ -109,6 +109,14 @@ footer p {
 
     .container {
         width: 100vw !important;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .headings {
+        font-size: 2.5rem;
     }
 }
 

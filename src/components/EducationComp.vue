@@ -284,4 +284,64 @@ export default {
 }
 
 }
+
+@media (max-width: 800px) {
+  .timeline {
+    width: 100vw !important;
+  }
+
+  .timeline::after {
+    left: 25px; /* Adjust position of the timeline line */
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .timeline-container.left-container,
+  .timeline-container.right-container {
+    left: 0;
+  }
+
+  .text-box {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+  }
+
+  .timeline-container img {
+    left: 0;
+    top: 35px;
+  }
+
+  .left-container img,
+  .right-container img {
+    left: 5px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    left: -15px;
+  }
+
+  .text-box h2 {
+    font-size: 1rem;
+  }
+
+  .text-box p {
+    font-size: 12px;
+  }
+
+  .left-container-arrow {
+  transform: rotate(180deg);
+  border-left: 15px solid #b6b2b2;
+}
+
+.right-container-arrow {
+  border-right: 15px solid #b6b2b2;
+}
+
+
+}
 </style>

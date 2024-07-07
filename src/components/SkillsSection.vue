@@ -103,61 +103,55 @@ export default {
     font-size: 1.5rem;
     /* text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3); */
     }
-
+    
+    .soft {
+        padding-left: 24px;
+    }
     /* .design {
         border-left: #ff0000;
         border-right: #ff0000;
         
-    } */
-
+        } */
+        
     /* line */
 
-.line-container {
+    .line-container {
     position: relative;
     width: 8px;
-    height: 100vh; 
+    height: 100vh;
     overflow: hidden;
 }
 
 .line {
     position: absolute;
-    top: 100%; 
+    top: 0;
     width: 100%;
-    height: 100vh; 
-    background: linear-gradient(to bottom, #ff005e, rgba(251, 255, 0)); 
-    animation: moveDown 3s forwards; 
+    height: 80vh;
+    background: linear-gradient(to bottom, #ff005e, rgba(251, 255, 0));
+    animation: moveDown 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
 @keyframes moveDown {
-    to {
-        top: 0; 
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: calc(100% - 8px); /* Adjust to your line's thickness */
     }
 }
 
-
-
-.soft {
-    padding-left: 24px;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 475px) {
     .line-container {
-    position: relative;
-    width: 4px; 
-    height: 100vh; 
-    overflow: hidden; 
-}
+        
+        width: 4px;
+    }
 
     .skill-divs {
         width: 100%;
     }
 
     .row.d-flex.justify-content-center .col-md-4 {
-    margin-bottom: 20px; /* Adjust margin between columns */
-  }
-
-  @media (max-width:475px) {
-  
-}
+        margin-bottom: 20px; /* Adjust margin between columns */
+    }
 }
 </style>

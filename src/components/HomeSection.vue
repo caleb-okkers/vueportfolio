@@ -6,13 +6,13 @@
       
     </video>
     <div class="row d-flex justify-content-center align-items-center pb-5">
-      <div class="col d-flex justify-content-center pb-5">
+      <div class="col d-flex justify-content-center pb-5 ">
         <div class="home-image">
           <img src="https://github.com/caleb-okkers/coolCards/blob/master/images/IMG_2711onetooneratio.jpg?raw=true" alt="Caleb Okkers" loading="lazy">
         </div>
 
       </div>
-      <div class="col d-flex justify-content-center align-items-center pb-5">
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center pb-5">
         <div class="content">
           <h1 class="text">Caleb Okkers</h1>
           <h3 v-if="title" class="title">
@@ -153,7 +153,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 0 auto;
     background: #000;
     box-sizing: border-box;
     z-index: 1;
@@ -214,8 +214,8 @@ export default {
 @media (max-width: 475px) {
   
   #home .home-image img {
-    width: 250px;
-    height: 250px;
+    width: 250px !important;
+    height: 250px !important;
     /* margin-top: 20px; */
     /* border-radius: 10%; */
     padding: 0px;
@@ -228,8 +228,8 @@ export default {
 
 .home-image {
     position: relative;
-    width: 252px;
-    height: 252px;
+    width: 252px !important;
+    height: 252px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +237,7 @@ export default {
     background: #000;
     box-sizing: border-box;
     z-index: 1;
-    margin-top: -10rem;
+    /* margin-top: 1rem; */
 }
 
 .content {
@@ -249,14 +249,67 @@ export default {
 }
 
 #home .text {
-    font-size: 2rem;
+    font-size: 2rem !important;
     padding-top: 5rem;
     width: 100%;
     width: 80vw;
 }
 
 #home .title {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
+    padding-top: 1rem;
+    width: 80vw;
+}
+
+}
+
+@media (max-width: 800px) {
+
+
+  #home .home-image img {
+    width: 400px;
+    height: 400px;
+    /* margin-top: 20px; */
+    /* border-radius: 10%; */
+    padding: 0px;
+    opacity: 0.85;
+}
+
+/* #home {
+  flex-direction: column;
+} */
+
+.home-image {
+    position: relative;
+    width: 402px;
+    height: 402px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: #000;
+    box-sizing: border-box;
+    z-index: 1;
+    /* margin-top: 1rem; */
+}
+
+.content {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+}
+
+#home .text {
+    font-size: 3rem;
+    padding-top: 5rem;
+    width: 100%;
+    width: 80vw;
+}
+
+#home .title {
+    font-size: 1.5rem;
     padding-top: 1rem;
     width: 80vw;
 }

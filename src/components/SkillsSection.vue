@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row pt-5">
             <h2 class="skills-heading headings">Skills</h2>
+            <p class="subtext pt-5">"What I do have are a very particular set of skills..."</p>
         </div>
         <div class="row d-flex justify-content-center pt-5">
             
@@ -60,8 +61,14 @@ export default {
 </script>
 <style scoped>
 
+.subtext {
+    text-align: center;
+}
+
 .stack {
     width: 40px;
+    border: none;
+    border-radius: 0;
 }
 
 .container {

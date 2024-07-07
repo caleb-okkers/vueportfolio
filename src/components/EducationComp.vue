@@ -2,6 +2,7 @@
       <div class="container" id="education-section">
         <div class="row pt-5">
           <h2 class="edu-heading headings">Education</h2>
+          <p class="subtext pt-5">I believe that knowledge is power ... but wisdom is how to use it.</p>
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">

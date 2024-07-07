@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row pt-5">
             <h2 class="contact-heading headings">Contact</h2>
-            <p class="pt-5">Let's work together...</p>
+            <p class="pt-5">"Awaiting first contact..."</p>
         </div>
 
         <div class="row">

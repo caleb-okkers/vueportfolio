@@ -79,7 +79,6 @@ export default {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    /* z-index: -1; */
     transform: translateZ(-1px) scale(2);
 }
 
@@ -118,7 +117,6 @@ export default {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 4rem;
-    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
     text-shadow: 2px 2px 4px cyan, 5px 5px 70px rgba(255, 255, 255, 0.7);
     
 }
@@ -146,8 +144,6 @@ export default {
 #home .home-image img {
     width: 450px;
     height: auto;
-    /* margin-top: 20px; */
-    /* border-radius: 10%; */
     padding: 0px;
     opacity: 0.85;
     animation: easeIn 1s ease-out forwards;
@@ -200,7 +196,6 @@ export default {
 
 .home-image .profile img {
     max-width: 100%;
-    /* opacity: 0.4; */
     transition: 0.5s;
     overflow: hidden;
 }
@@ -216,15 +211,11 @@ export default {
   #home .home-image img {
     width: 250px !important;
     height: 250px !important;
-    /* margin-top: 20px; */
-    /* border-radius: 10%; */
+    
     padding: 0px;
     opacity: 0.85;
 }
 
-/* #home {
-  flex-direction: column;
-} */
 
 .home-image {
     position: relative;
@@ -237,7 +228,6 @@ export default {
     background: #000;
     box-sizing: border-box;
     z-index: 1;
-    /* margin-top: 1rem; */
 }
 
 .content {
@@ -269,15 +259,10 @@ export default {
   #home .home-image img {
     width: 400px;
     height: 400px;
-    /* margin-top: 20px; */
-    /* border-radius: 10%; */
     padding: 0px;
     opacity: 0.85;
 }
 
-/* #home {
-  flex-direction: column;
-} */
 
 .home-image {
     position: relative;
@@ -290,7 +275,6 @@ export default {
     background: #000;
     box-sizing: border-box;
     z-index: 1;
-    /* margin-top: 1rem; */
 }
 
 .content {

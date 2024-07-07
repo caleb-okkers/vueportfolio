@@ -13,7 +13,6 @@
         v-for="(hobby, index) in hobbies"
         :key="index"
         styleType="about-style">
-        <!-- :gradientIndex="getGradientIndex(index)" -->
         <template #img>
           <img :src="hobby.image" alt="hobby" loading="lazy">
         </template>
@@ -45,24 +44,8 @@ export default {
   mounted() {
     this.$store.dispatch('getAboutMe'),
     this.$store.dispatch('getHobbies')
-  },
-  // methods: {
-  //   getGradientIndex(index) {
-  //     switch ((index % 6) + 1) {
-  //       case 1:
-  //       case 4:
-  //         return 1;
-  //       case 2:
-  //       case 5:
-  //         return 2;
-  //       case 3:
-  //       case 6:
-  //         return 3;
-  //       default:
-  //         return 1;
-  //     }
-  //   }
-  // }
+  }
+ 
 }
 </script>
   
@@ -71,22 +54,12 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-} */
+
 
 .about-heading {
   color: #ff005e;
   text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
 }
-
-/* .about-heading:nth-child(2) {
-  color: #fbff00;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0, 0.5);
-} */
 
 .hobbies {
     display: flex;

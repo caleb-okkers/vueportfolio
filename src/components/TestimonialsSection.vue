@@ -39,28 +39,6 @@ export default {
 </script>
 
 <style scoped>
-   /* .container {
-        flex-wrap: wrap;
-    } */
-
-    span img {
-      width: 30px;
-      border-radius: 50%;
-      /* border: 2px solid #fff; */
-    }
-
-    span a i {
-        /* width: 30px; */
-        color: #fff;
-    }
-
-    .card-div {
-        width: 30%;
-    }
-
-    .box:hover {
-        height: 400px !important;
-    }
 
     /* cards */
 
@@ -84,10 +62,6 @@ export default {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* padding: 2rem; */
-    /*min-height: 100vh; */
-    /* background: #010615; */
-    /* background: #fff; */
     width: 380px;
 }
 

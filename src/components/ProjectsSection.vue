@@ -45,18 +45,13 @@ export default {
 }
 </script>
 <style scoped>
-    /* .container {
-        flex-wrap: wrap;
-    } */
 
     span img {
       width: 30px;
       border-radius: 50%;
-      /* border: 2px solid #fff; */
     }
 
     span a i {
-        /* width: 30px; */
         color: #fff;
     }
 
@@ -72,12 +67,6 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-} */
 
 .project-heading {
   color: #772aff;
@@ -97,10 +86,6 @@ export default {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* padding: 2rem; */
-    /*min-height: 100vh; */
-    /* background: #010615; */
-    /* background: #fff; */
     width: 380px;
 }
 
@@ -164,20 +149,6 @@ export default {
 
 }
 
-/*.box::before,
-.box::after {
-    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
-}
-
-.box:nth-child(2):before,
-.box:nth-child(2):after {
-    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
-}
-
-.box:nth-child(3):before,
-.box:nth-child(3):after {
-    background: linear-gradient(235deg, #772aff, #010615, #2196F3);
-}*/
 
 .box::before,
 .box::after {
@@ -195,7 +166,6 @@ export default {
 }
 
 .box .content {
-    /* position: absolute; */
     bottom: 0;
     left: 10px;
     right: 10px;
@@ -230,7 +200,6 @@ export default {
     font-weight: 200;
     line-height: 20px;
     letter-spacing: 2px;
-    /* padding-bottom: 10px;  not working */
 }
 
 .box .content {

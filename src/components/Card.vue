@@ -1,7 +1,6 @@
 <template>
   <div class="card-div">
     <div :class="['box', cardStyle]">
-        <!-- :style="getGradientStyle" -->
       <div class="imgBx">
         <slot name="img"></slot>
       </div>
@@ -44,8 +43,6 @@ export default {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /*min-height: 100vh; */
-    /* background: #010615; */
     width: 380px;
     padding: 0 0 !important;
 }
@@ -118,27 +115,6 @@ export default {
     
 }
 
-/* .box::before,
-.box::after {
-    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
-}
-
-
-
-.box:nth-child(2)::before,
-.box:nth-child(2)::after {
-    background: linear-gradient(235deg, #ff005e, #010615, #fbff00) !important;
-}
-
-.box:nth-child(3)::before,
-.box:nth-child(3)::after {
-    background: linear-gradient(235deg, #772aff, #010615, #2196F3) !important;
-} */
-
-/* .box::before,
-.box::after {
-    background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
-    } */
     
     .box .content {
         /* position: ; */

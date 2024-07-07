@@ -9,7 +9,7 @@
                 <div class="tech skill-divs">
                     <h4 class="pb-4">Development Arsenal</h4>
                     <p>These are the technologies i am proficient in. With these in my locker, I'm able to build pixel-perfect functional websites.</p>
-                    <p v-for="tech in skills" :key="tech.name"><span><img :src=tech.icon alt="logo" loading="lazy"></span> {{ tech.name }}</p>
+                    <p v-for="tech in skills" :key="tech.name"><img :src=tech.icon alt="logo" loading="lazy" class="stack"> {{ tech.name }}</p>
                 </div>
                 <div class="line-container">
         <div class="line"></div>
@@ -60,6 +60,10 @@ export default {
 </script>
 <style scoped>
 
+.stack {
+    width: 40px;
+}
+
 .container {
     flex-wrap: wrap;
 }
@@ -101,17 +105,11 @@ export default {
     font-weight: 500;
     font-style: normal;
     font-size: 1.5rem;
-    /* text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3); */
     }
     
     .soft {
         padding-left: 24px;
     }
-    /* .design {
-        border-left: #ff0000;
-        border-right: #ff0000;
-        
-        } */
         
     /* line */
 
@@ -136,7 +134,7 @@ export default {
         top: 0;
     }
     50% {
-        top: calc(100% - 8px); /* Adjust to your line's thickness */
+        top: calc(100% - 8px); 
     }
 }
 
@@ -151,7 +149,7 @@ export default {
     }
 
     .row.d-flex.justify-content-center .col-md-4 {
-        margin-bottom: 20px; /* Adjust margin between columns */
+        margin-bottom: 20px; 
     }
 }
 </style>

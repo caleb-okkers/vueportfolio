@@ -49,30 +49,19 @@ section {
     /* background-color: #010615; */
   }
 
-/* .nav {
-    padding: 30px;
-}
+/* ease in */
 
-nav a {
-    font-weight: bold;
-    color: rgb(29, 29, 29);
-}
+@keyframes easeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
 
-
-
-.navlinks {
-    text-decoration: none !important;
-}
-
-
-.navbar {
-    background-color: black !important;
-}
-
-.nav {
-    background-color: black !important;
-} */
-
+   
 
 
 /* wrapper */

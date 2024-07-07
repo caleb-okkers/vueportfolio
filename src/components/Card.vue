@@ -19,38 +19,13 @@ export default {
     styleType: {
       type: String,
       default: 'default'
-    },
-    // gradientIndex: {
-    //   type: Number,
-    //   default: 1
-    // }
-  },
+    }
+},
   computed: {
     cardStyle() {
       return this.styleType;
-    },
-    // getGradientStyle() {
-    //   let gradient;
-    //   switch (this.gradientIndex) {
-    //     case 1:
-    //     case 4:
-    //       gradient = 'linear-gradient(235deg, #89ff00, #010615, #00bcd4)';
-    //       break;
-    //     case 2:
-    //     case 5:
-    //       gradient = 'linear-gradient(235deg, #ff005e, #010615, #fbff00)';
-    //       break;
-    //     case 3:
-    //     case 6:
-    //       gradient = 'linear-gradient(235deg, #772aff, #010615, #2196F3)';
-    //       break;
-    //     default:
-    //       gradient = 'linear-gradient(235deg, #89ff00, #010615, #00bcd4)';
-    //   }
-    //   return {
-    //     background: gradient
-    //   };
-    // }
+    }
+    
   }
 }
 </script>
@@ -109,7 +84,7 @@ export default {
 
 .box .imgBx img {
     max-width: 100%;
-    opacity: 0.1;
+    opacity: 0.5;
     transition: 0.5s;
     overflow: hidden !important;
 }
@@ -306,20 +281,32 @@ export default {
 
 /* testimonials */
 .box:hover.test-style {
-    height: 720px !important;
+    height: 650px !important;
 }
 
 .box .content.test-style {
-        margin-top: -30px !important;
+        margin-top: -110px !important;
         font-size: 12px;
     }
 
-    .box .imgBx img {
-    opacity: 0.1;
-    transition: 0.5s;
-    overflow: hidden !important;
+ 
+
 }
 
+
+.card-enter {
+  animation: fallIn 0.5s ease forwards;
+}
+
+@keyframes fallIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 </style>

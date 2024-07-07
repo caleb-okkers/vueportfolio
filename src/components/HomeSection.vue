@@ -67,11 +67,7 @@ export default {
   }
 }
 
-// const video = document.getElementById('bgVideo');
-//         video.addEventListener('ended', () => {
-//             video.currentTime = 0;
-//             video.play();
-//         });
+
 </script>
 
 <style scoped>
@@ -135,6 +131,16 @@ export default {
     text-shadow: 2px 2px 2px cyan, 5px 5px 70px rgba(255, 255, 255, 0.7);
 }
 
+@keyframes easeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
 
 
 #home .home-image img {
@@ -144,7 +150,11 @@ export default {
     /* border-radius: 10%; */
     padding: 0px;
     opacity: 0.85;
+    animation: easeIn 1s ease-out forwards;
+    border-radius: 0px 20px;
 }
+
+
 
 .home-image {
     position: relative;
@@ -157,6 +167,7 @@ export default {
     background: #000;
     box-sizing: border-box;
     z-index: 1;
+    border-radius: 0px 20px;
 }
 
 .home-image::before {
@@ -168,8 +179,7 @@ export default {
     bottom: -2px;
     background: #fff;
     z-index: 0;
-    /* width: 452px;
-    height: 452px; */
+    border-radius: 0px 20px;
 }
 
 .home-image::after {
@@ -182,21 +192,11 @@ export default {
     background: #fff;
     z-index: -2;
     filter: blur(40px);
-    /* width: 452px;
-    height: 452px; */
+    border-radius: 0px 20px;
 
 }
 
-/* .home-image .profile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-} */
+
 
 .home-image .profile img {
     max-width: 100%;

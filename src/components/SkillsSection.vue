@@ -9,7 +9,7 @@
                 <div class="tech skill-divs">
                     <h4 class="pb-4">Development Arsenal</h4>
                     <p>These are the technologies i am proficient in. With these in my locker, I'm able to build pixel-perfect functional websites.</p>
-                    <p v-for="tech in skills" :key="tech.name"><span><i :class="['fa-brands', tech.icon]"></i></span> {{ tech.name }}</p>
+                    <p v-for="tech in skills" :key="tech.name"><span><img :src=tech.icon alt="logo" loading="lazy"></span> {{ tech.name }}</p>
                 </div>
                 <div class="line-container">
         <div class="line"></div>

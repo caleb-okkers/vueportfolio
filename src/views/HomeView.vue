@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <!-- <NavBar/> -->
-    
+      <CircleAnimation/>
       <section class="row" id="home">
         <HomeSection/>
       </section>
@@ -39,6 +39,7 @@ import SkillsSection from '@/components/SkillsSection.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
 import TestimonialsSection from '@/components/TestimonialsSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
+import CircleAnimation from '@/components/CircleAnimation.vue'
 
 export default {
   
@@ -49,7 +50,8 @@ export default {
     SkillsSection,
     ProjectsSection,
     TestimonialsSection,
-    ContactSection
+    ContactSection,
+    CircleAnimation
   }
 }
 </script>

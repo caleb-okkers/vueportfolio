@@ -108,7 +108,7 @@ export default {
 
 .box .imgBx img {
     max-width: 100%;
-    opacity: 0.1;
+    opacity: 0.4;
     transition: 0.5s;
     overflow: hidden;
 }

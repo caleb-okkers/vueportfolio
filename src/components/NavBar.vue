@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
      <nav class="navbar">
       <ul class="navbar-nav">
         <li class="logo">
@@ -87,10 +87,12 @@
 
 .navbar {
  width: 5rem;
- min-height: 100vh !important;
- position: fixed;
+ height: 100vh;
+ position: fixed ;
  background-color: #000;
- z-index: 3;
+ top: 0;
+ left: 0;
+ z-index: 11;
  transition: width 200ms ease;
 }
 
@@ -210,12 +212,69 @@
   margin-left: 2rem;
  }
 
- 
-</style> -->
 
-<template>
+ @media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw !important;
+    height: 5rem;
+    transition: height 200ms ease;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar:hover {
+  width: 100vw !important;
+  height: 5rem;
+}
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .link-text {
+    font-size: 12px;
+    display: none;
+  } 
+
+  .nav-link i {
+    margin-left: 1.2rem; 
+    margin-right: 1.2rem; 
+    width: 1rem;
+    
+  }
+
+  .navbar:hover .link-text {
+  display: none;
+}
   
-  <nav class="navbar navbar-dark sticky-top">
+}
+
+@media only screen and (max-width: 475px) {
+
+  .nav-link i {
+    margin-left: 0.8rem; 
+    margin-right: 0.8rem; 
+    width: 1rem;
+    
+  }
+}
+</style>
+
+<!-- <template>
+  
+  <nav class="navbar navbar-dark sticky-top custom-sticky">
     <div class="container-fluid">
       <a class="navbar-brand hometext" href="#home">CO.</a>
       <button
@@ -347,6 +406,13 @@ margin-left: 1.3rem;
 }
 }
 
+.custom-sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 11 !important; /* Ensures it appears above other elements */
+}
+
 </style>
 
-  
+   -->

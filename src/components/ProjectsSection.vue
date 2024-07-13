@@ -210,6 +210,10 @@ export default {
     letter-spacing: 2px;
 }
 
+.container {
+    width: 100%;
+}
+
 
 
 </style>

@@ -86,7 +86,7 @@ export default {
 }
 
     .row {
-        width: 70%;
+        width: 85%;
         margin: 0 auto;
     }
     

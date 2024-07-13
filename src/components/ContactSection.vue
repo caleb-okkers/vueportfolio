@@ -7,11 +7,6 @@
 
         <div class="row">
             <div class="col">
-                <!-- <video autoplay loop muted playsinline class="contact-video" id="contact-video">
-                   <source src="https://videos.pexels.com/video-files/3129902/3129902-uhd_2560_1440_25fps.mp4" type="video/mp4">
-                   Your browser does not support the video tag.
-            
-                </video> -->
                 <div class="spline-contact">
 
                     
@@ -70,12 +65,6 @@ export default {
     name: "ContactSection"
 
 }
-
-// const video = document.getElementById('contact-video');
-//         video.addEventListener('ended', () => {
-//             video.currentTime = 0;
-//             video.play();
-//         });
 
 
 </script>

@@ -39,13 +39,13 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           document.querySelectorAll('.timeline-container').forEach((el, index) => {
-            console.log(`Animating element with index: ${index}`); // Use index here
+            console.log(`Animating element with index: ${index}`); 
             el.style.animationPlayState = 'running';
           });
-          observer.unobserve(entry.target); // Stop observing once animation has started
+          observer.unobserve(entry.target); 
         }
       });
-    }, { threshold: 0.1 }); // Trigger when 10% of the section is in view
+    }, { threshold: 0.1 }); 
     
     observer.observe(this.$el);
   }
@@ -64,27 +64,15 @@
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
-    /* animation: movedown 2s linear forwards; */
-  
+    
   }
   
-  /* .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    
-    left: 50%;
-    margin-left: -1px;
-  } */
   
   .timeline::after {
     content: '';
     position: absolute;
     width: 2px;
     height: 100%;
-    /* background: linear-gradient(235deg, #B8860B, #010615, #B8860B); */
     background: #fff;
     top: 0;
     left: 50%;
@@ -246,55 +234,6 @@ transform: scale(1.03);
   }
  
   
-  /* @media screen and (max-width: 600px) {
-    .timeline {
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin: 0 auto;
-    }
-
-    .timeline::before {
-      left: 1rem;
-    }
-  
-    .timeline-container {
-      width: 100%;
-      padding-left: 0px;
-      padding-right: 25px;
-    }
-
-    .timeline-container .left-container,
-    .timeline-container .right-container {
-      width: 20vw !important;
-      left: 0;;
-    }
-  
-    .text-box {
-      font-size: 12px;
-      width: 50vw;
-    }
-  
-    .right-container {
-      left: 0;
-    }
-  
-    .timeline-container img {
-      left: 10px;
-    }
-  
-    .left-container-arrow,
-    .right-container-arrow {
-      border-right: 15px solid #89ff00;
-      border-left: 0;
-      left: -15px;
-    }
-
-    .timeline::after {
-      left: 0;
-    }
-  } */
 
   @media (max-width: 475px) {
   .timeline {
@@ -302,7 +241,7 @@ transform: scale(1.03);
   }
 
   .timeline::after {
-    left: 25px; /* Adjust position of the timeline line */
+    left: 25px; 
   }
 
   .timeline-container {
@@ -361,7 +300,7 @@ transform: scale(1.03);
   }
 
   .timeline::after {
-    left: 25px; /* Adjust position of the timeline line */
+    left: 25px; 
   }
 
   .timeline-container {

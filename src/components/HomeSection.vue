@@ -5,14 +5,14 @@
       Your browser does not support the video tag.
       
     </video>
-    <div class="row d-flex justify-content-center align-items-center pb-5">
-      <div class="col d-flex justify-content-center pb-5 ">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col d-flex justify-content-center">
         <div class="home-image">
           <img src="https://github.com/caleb-okkers/coolCards/blob/master/images/IMG_2711onetooneratio.jpg?raw=true" alt="Caleb Okkers" loading="lazy">
         </div>
 
       </div>
-      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center pb-5">
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
         <div class="content">
           <h1 class="text">Caleb Okkers</h1>
           <h3 v-if="title" class="title">

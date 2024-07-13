@@ -4,8 +4,8 @@
     <main>
       <router-view/>
     </main>
-    <Footer/>
     <CircleAnimation/>
+    <Footer/>
   </div>
   
 </template>

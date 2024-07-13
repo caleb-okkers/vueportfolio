@@ -38,13 +38,13 @@ export default {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           document.querySelectorAll('.timeline-container').forEach((el, index) => {
-            console.log(`Animating element with index: ${index}`); // Use index here
+            console.log(`Animating element with index: ${index}`); 
             el.style.animationPlayState = 'running';
           });
-          observer.unobserve(entry.target); // Stop observing once animation has started
+          observer.unobserve(entry.target); 
         }
       });
-    }, { threshold: 0.1 }); // Trigger when 10% of the section is in view
+    }, { threshold: 0.1 }); 
     
     observer.observe(this.$el);
   }

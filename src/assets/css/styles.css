@@ -134,7 +134,7 @@ html {
 
 body {
     min-height: 100vh;
-    background: #050505;
+    background: #020202;
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 0;
@@ -162,7 +162,7 @@ body {
 /* about */
 
 #about {
-    background: #000;
+    background: #020202;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -205,7 +205,7 @@ body {
 /* resume */
 
 #resume {
-    background: #050505;
+    background: #020202;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -233,7 +233,7 @@ body {
 
 
 #skills {
-    background: #000;
+    background: #020202;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -258,7 +258,7 @@ body {
 /* projects */
 
 #projects {
-    background: #000;
+    background: #020202;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -289,7 +289,7 @@ body {
 /* Testimonials */
 
 #testimonials {
-    background: #000;
+    background: #020202;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -318,7 +318,7 @@ body {
 /* contact */
 
 #contact {
-    background: #000;
+    background: #020202;
     display: flex;
     justify-content: center;
     min-height: 100vh;

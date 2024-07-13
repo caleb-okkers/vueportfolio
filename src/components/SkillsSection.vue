@@ -31,7 +31,7 @@
 
                 <div class="soft skill-divs">
                     <h4 class="pb-4">Soft Skills</h4>
-                    <p>The underrated "soft" skills. Without these my technical expertise would only take me so far. I continue to hone them alongside my tech stack."</p>
+                    <p>The underrated "soft" skills. Without these my technical expertise would only take me so far. I continue to hone them alongside my tech stack.</p>
                     <p v-for="skill in softSkills" :key="skill.name">{{ skill.name }}</p>
                 </div>
             </div>
@@ -158,5 +158,11 @@ export default {
     .row.d-flex.justify-content-center .col-md-4 {
         margin-bottom: 20px; 
     }
+
+    .design {
+        padding-bottom: 3.5rem;
+    }
+
+
 }
 </style>

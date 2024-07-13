@@ -49,7 +49,7 @@ export default {
       try {
         if (cnt.value == jobTitle.value?.length) cnt.value = 0
         title.value = jobTitle.value?.at(cnt.value)?.title
-        setTimeout(repeat, 2000)
+        setTimeout(repeat, 1700)
         cnt.value++
       } catch (e) {
         // Handle error

@@ -89,7 +89,7 @@
  width: 5rem;
  height: 100vh;
  position: fixed ;
- background-color: #000;
+ background-color: #020202;
  top: 0;
  left: 0;
  z-index: 11;
@@ -134,6 +134,11 @@
 }
 
 .navbar:hover .link-text:hover {
+  color: rgb(21, 200, 200);
+}
+
+.nav-link:hover i,
+.nav-link:hover .link-text {
   color: rgb(21, 200, 200);
 }
 
@@ -183,7 +188,7 @@
 
 .logo svg {
   transform: rotate(0deg);
-  transition: var(--transition-speed);
+  transition: 0.3s;
 }
 
 .logo-text
@@ -191,7 +196,7 @@
   display: inline;
   position: absolute;
   left: -999px;
-  transition: var(--transition-speed);
+  transition: 0.3s;
 }
 
 .navbar:hover .logo svg {

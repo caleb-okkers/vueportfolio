@@ -91,6 +91,7 @@ footer p {
 
     .headings {
         font-size: 2.5rem;
+        padding-top: 2.5rem;
     }
 }
 
@@ -361,6 +362,15 @@ body {
     box-shadow: 0 0 15px cyan;
 }
 
+#contact button:hover {
+    background-color: cyan;
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-shadow: 0 0 15px cyan;
+}
+
 #contact i {
     color: #fff;
 }
@@ -372,7 +382,7 @@ body {
     font-style: normal;
 }
 
-#contact a:hover,
-#contact i:hover {
+#contact a:hover span,
+#contact a:hover i {
     color: cyan
 }

@@ -38,11 +38,15 @@
                 <div class="socials">
                     <a id="profile-link" href="https://github.com/caleb-okkers" target="_blank" class="btn contact-details">
                         <i class="fab fa-github fa-2xl"></i>
-                        GitHub
+                        <span>
+                            GitHub
+                        </span>
                     </a>
                     <a id="profile-link" href="https://www.linkedin.com/in/caleb-okkers-43b100287" target="_blank" class="btn contact-details">
                         <i class="fab fa-linkedin fa-2xl"></i>
-                        LinkedIn
+                        <span>
+                            linkedin
+                        </span>
                     </a>
                 </div>
             </div>

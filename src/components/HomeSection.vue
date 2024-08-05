@@ -270,6 +270,11 @@ export default {
     opacity: 0.85;
 }
 
+.profile-col {
+  margin-top: -5rem;
+  padding-bottom: 3rem;
+}
+
 
 .home-image {
     position: relative;

@@ -6,9 +6,9 @@
       
     </video>
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col d-flex justify-content-center">
+      <div class="col d-flex justify-content-center profile-col">
         <div class="home-image">
-          <img src="https://github.com/caleb-okkers/coolCards/blob/master/images/IMG_2711onetooneratio.jpg?raw=true" alt="Caleb Okkers" loading="lazy">
+          <img src="https://github.com/caleb-okkers/portfolioaugust24/blob/master/src/assets/rhodes-e.png?raw=true" alt="Caleb Okkers" loading="lazy">
         </div>
 
       </div>
@@ -100,6 +100,8 @@ export default {
 .row {
   width: 70%;
 }
+
+
 
 #home .content {
     position: absolute;
@@ -214,6 +216,11 @@ export default {
     
     padding: 0px;
     opacity: 0.85;
+}
+
+.profile-col {
+  margin-top: -5rem;
+  padding-bottom: 3rem;
 }
 
 

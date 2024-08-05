@@ -220,6 +220,7 @@
 
  @media only screen and (max-width: 600px) {
   .navbar {
+    top: auto;
     bottom: 0;
     width: 100vw !important;
     height: 5rem;
@@ -254,8 +255,8 @@
   } 
 
   .nav-link i {
-    margin-left: 1.2rem; 
-    margin-right: 1.2rem; 
+    margin-left: 1.3rem; 
+    margin-right: 1.3rem; 
     width: 1rem;
     
   }
@@ -269,8 +270,8 @@
 @media only screen and (max-width: 475px) {
 
   .nav-link i {
-    margin-left: 0.8rem; 
-    margin-right: 0.8rem; 
+    margin-left: 0.9rem; 
+    margin-right: 0.9rem; 
     width: 1rem;
     
   }

@@ -8,7 +8,7 @@
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col d-flex justify-content-center profile-col">
         <div class="home-image">
-          <img src="https://github.com/caleb-okkers/portfolioaugust24/blob/master/src/assets/rhodes-e.png?raw=true" alt="Caleb Okkers" loading="lazy">
+          <img src="https://github.com/caleb-okkers/vueportfolio/blob/main/src/assets/Caleb%20Okkers%20Profile.png?raw=true" alt="Caleb Okkers" loading="lazy">
         </div>
 
       </div>

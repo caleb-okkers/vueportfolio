@@ -44,7 +44,7 @@
         <li class="nav-item">
           <a href="#resume" class="nav-link">
             <i class="fa-sharp fa-solid fa-id-card"></i>
-            <span class="link-text">Resume</span>
+            <span class="link-text">Education & Experience</span>
           </a>
         </li>
         <li class="nav-item">
@@ -57,12 +57,6 @@
           <a href="#projects" class="nav-link">
             <i class="fa-solid fa-display"></i>
             <span class="link-text">Projects</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#testimonials" class="nav-link">
-            <i class="fa-solid fa-people-group"></i>
-            <span class="link-text">Testimonials</span>
           </a>
         </li>
         <li class="nav-item">

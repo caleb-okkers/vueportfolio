@@ -18,9 +18,6 @@
       <section class="row" id="projects">
         <ProjectsSection/>
       </section>
-      <section class="row" id="testimonials">
-        <TestimonialsSection/>
-      </section>
       <section class="row" id="contact">
         <ContactSection/>
       </section>
@@ -30,14 +27,11 @@
 </template>
 
 <script>
-// import NavBar from '@/components/NavBar.vue'
-// import Footer from '@/components/Footer.vue'
 import HomeSection from '@/components/HomeSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ResumeSection from '@/components/ResumeSection.vue'
 import SkillsSection from '@/components/SkillsSection.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
-import TestimonialsSection from '@/components/TestimonialsSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 import CircleAnimation from '@/components/CircleAnimation.vue'
 
@@ -49,7 +43,6 @@ export default {
     ResumeSection,
     SkillsSection,
     ProjectsSection,
-    TestimonialsSection,
     ContactSection,
     CircleAnimation
   }

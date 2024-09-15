@@ -21,17 +21,7 @@ export default {
 
 <template>
   <footer class="container-fluid">
-    <div class="row text-center py-4">
-      <div class="col-md-4">
-        <p class="mb-0">Athlone, Cape Town</p>
-      </div>
-      <div class="col-md-4">
-        <p class="mb-0">Email: okkerscaleb@gmail.com</p>
-      </div>
-      <div class="col-md-4">
-        <p class="mb-0">Phone: 078 344 9656</p>
-      </div>
-    </div>
+
     <div class="row pt-3">
       <p class="lead text-center w-100">
         Caleb Okkers &copy; <span>{{ cYear }}</span>

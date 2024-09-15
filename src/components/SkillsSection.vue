@@ -12,7 +12,7 @@
                         <h5 class="pb-4">Development Arsenal</h5>
                         <p>These are the technologies I am proficient in. With these in my locker, I'm able to build pixel-perfect functional websites.</p>
                     </div>
-                    <div class="skills-grid">
+                    <div class="skills-grid tech-grid">
                         <div v-for="tech in skills" :key="tech.name" class="skill-item">
                             <img :src="tech.icon" alt="logo" loading="lazy" class="stack"> {{ tech.name }}
                         </div>
@@ -26,7 +26,7 @@
                         <h5 class="pb-4">Design Tools</h5>
                         <p>I use these platforms to plan beautiful designs or create exciting content leading to satisfying, unique user experiences.</p>
                     </div>
-                    <div class="skills-grid">
+                    <div class="skills-grid design-grid">
                         <div v-for="tool in designSkills" :key="tool.name" class="skill-item">
                             <img :src="tool.icon" alt="logo" loading="lazy"> {{ tool.name }}
                         </div>
@@ -40,7 +40,7 @@
                         <h5 class="pb-4">Soft Skills</h5>
                         <p>The underrated "soft" skills. Without these, my technical expertise would only take me so far.</p>
                     </div>
-                    <div class="skills-grid">
+                    <div class="skills-grid soft-grid">
                         <div v-for="skill in softSkills" :key="skill.name" class="skill-item">
                             {{ skill.name }}
                         </div>
@@ -177,6 +177,24 @@ img {
     margin-right: 10px;
 }
 
+@media (max-width: 440px) {
+    .soft-grid{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    .skill-item {
+        flex-direction: column; /* Stack the icon and name vertically */
+        text-align: center;
+    }
+
+    .skill-item img {
+        margin-bottom: 10px; /* Add space between the icon and the name */
+    }
+
+    .skill-intro {
+    height: 10rem;
+}
+}
 
 
 </style>

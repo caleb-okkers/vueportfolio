@@ -51,7 +51,18 @@
                 </div>
             </div>
         </div>
-        <div class="content"></div>
+        <!-- <div class="content"></div> -->
+        <div class="row text-center py-4 pt-5">
+      <div class="col-md-4">
+        <p class="mb-0">Athlone, Cape Town</p>
+      </div>
+      <div class="col-md-4">
+        <p class="mb-0">Email: okkerscaleb@gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <p class="mb-0">Phone: 078 344 9656</p>
+      </div>
+    </div>
     </div>
 </template>
 
@@ -137,6 +148,11 @@ export default {
 </script>
 
 <style scoped>
+
+.col-md-4 {
+    padding: 0;
+}
+
   .contact-heading {
   color: #fff;
   text-shadow: 2px 2px 4px #000, 5px 5px 70px cyan;

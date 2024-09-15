@@ -47,18 +47,24 @@
             <span class="link-text">Education & Experience</span>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="#skills" class="nav-link">
             <i class="fa-sharp fa-solid fa-horse-head"></i>
             <span class="link-text">Skills</span>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a href="#projects" class="nav-link">
             <i class="fa-solid fa-display"></i>
             <span class="link-text">Projects</span>
           </a>
         </li>
+        <!-- <li class="nav-item">
+          <a href="#testimonials" class="nav-link">
+            <i class="fa-solid fa-people-group"></i>
+            <span class="link-text">Testimonials</span>
+          </a>
+        </li> -->
         <li class="nav-item">
           <a href="#contact" class="nav-link">
             <i class="fa-sharp fa-regular fa-paper-plane"></i>

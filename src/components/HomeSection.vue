@@ -82,21 +82,6 @@ export default {
     transform: translateZ(-1px) scale(2);
 }
 
-#home {
-    position: relative;
-    
-    min-height: 100vh;
-    transform-style: preserve-3d;
-    
-}
-
-#home::before {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    
-}
-
 .row {
   width: 70%;
 }

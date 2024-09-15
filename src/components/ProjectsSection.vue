@@ -16,7 +16,7 @@
                             <a :href= project.github target="_blank">
                                 <i class="fa-brands fa-github fa-2xl"></i>
                             </a>
-                            <a :href= project.vercel target="_blank">
+                            <a :href= project.hosted target="_blank">
                                <img src="https://raw.githubusercontent.com/caleb-okkers/vueportfolio/16b6a8e7e2fce2e455bce1cacb5b5e84dd6e413f/src/assets/vercel-logo-svgrepo-com.svg" alt="vercel" loading="lazy">
                             </a>
                         </span>

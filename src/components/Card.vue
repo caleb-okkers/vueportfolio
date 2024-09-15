@@ -180,11 +180,12 @@ export default {
 
 /* projects */
 .box:hover.projects-style {
-    height: 450px !important;
+    height: 520px !important;
 }
 
 .box .content.projects-style {
-        margin-top: 250px !important;
+        margin-top: 170px !important;
+        margin-bottom: 10px !important;
     }
 
 .box.projects-style::before,

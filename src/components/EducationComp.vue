@@ -55,8 +55,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .edu-heading {
-  color: #772aff;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px #2196F3;
+  color: #89ff00;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px #00bcd4;
 }
 
 .timeline {
@@ -163,7 +163,7 @@ export default {
   border: 3px solid;
   border-image-slice: 1;
   border-width: 3px;
-  border-image-source: linear-gradient(235deg, #772aff, #b6b2b2, #772aff);
+  border-image-source: linear-gradient(235deg, #89ff00, #b6b2b2, #89ff00);
   width: 400px;
   box-shadow: 0 0 10px #2196F3;
 }
@@ -211,7 +211,7 @@ export default {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #772aff;
+  border-left: 15px solid #89ff00;
   right: -15px;
 }
 
@@ -223,7 +223,7 @@ export default {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #772aff;
+  border-right: 15px solid #89ff00;
   left: -15px;
 }
 

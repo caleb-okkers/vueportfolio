@@ -154,4 +154,16 @@
   }
 
 }
+
+.company-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.job-tabs li.active .company-logo {
+  filter: none;
+}
   </style>

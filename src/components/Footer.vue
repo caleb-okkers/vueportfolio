@@ -84,4 +84,25 @@ svg {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+
+footer {
+    margin-left: 2.2rem;
+  }
+
+  @media (max-width:600px) {
+
+  footer {
+    margin-left: 0rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width:475px) {
+
+  footer {
+    margin-left: 0rem;
+    padding-bottom: 5rem;
+  }
+
+}
 </style>

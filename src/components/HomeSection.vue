@@ -83,6 +83,7 @@ export default {
     font-style: normal;
     box-shadow: 0 0 5px cyan;
     border-radius: 0px 10px;
+    border-color: cyan;
 }
 
 .btn:hover {

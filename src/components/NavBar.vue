@@ -160,7 +160,7 @@
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-align: left;
   /* margin-left: 2rem; */
   display: flex;

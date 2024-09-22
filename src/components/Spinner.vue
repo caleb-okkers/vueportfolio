@@ -23,6 +23,18 @@ margin: 0 auto !important;
 padding: 0 !important;
 }
 
+@media (max-width: 800px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
 .spinner {
 color: #000;
 animation: spin 1500ms linear infinite;

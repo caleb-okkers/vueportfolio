@@ -23,8 +23,8 @@ export default {
   <footer class="container-fluid">
 
     <div class="row pt-3">
-      <p class="lead text-center w-100">
-        Caleb Okkers &copy; <span>{{ cYear }}</span>
+      <p class="text-center w-100">
+        Caleb Okkers - Portfolio &copy; <span>{{ cYear }}</span>
       </p>
     </div>
   </footer>

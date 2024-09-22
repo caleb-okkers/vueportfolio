@@ -77,9 +77,7 @@ export default {
 
 .subtext {
   text-align: center;
-  font-size: 1.2rem;
   margin-bottom: 40px;
-  color: #666;
 }
 
 .education-list {
@@ -102,12 +100,13 @@ export default {
 .education-tabs li {
   padding: 15px;
   cursor: pointer;
-  font-size: 1.1rem;
   color: #666;
   border-left: 2px solid transparent;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
+  font-weight: 200;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .education-tabs li.active {
@@ -128,18 +127,17 @@ export default {
 .education-details h3 {
   font-size: 1.75rem;
   color: #89ff00;
+  font-family: "Poppins";
 }
 
 .education-details .education-duration {
   font-size: 1rem;
-  color: #666;
   margin-bottom: 20px;
 }
 
-.education-details p {
+/* .education-details p {
   font-size: 1.1rem;
-  color: #333;
-}
+} */
 
 @media (max-width:475px) {
     .education-tabs {

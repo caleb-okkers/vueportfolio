@@ -293,6 +293,12 @@ img {
 
 
 @media (max-width: 475px) {
+
+    .row {
+    width: 100%;
+    margin: 0 auto;
+}
+
     .soft-grid{
         grid-template-columns: repeat(1, 1fr); 
     }
@@ -315,10 +321,10 @@ img {
         margin-top: 2.5rem;
     }
 
-    .skills-grid{
+    /* .skills-grid{
         grid-template-columns: repeat(1, 1fr); 
         margin-top: 3.5rem;
-    }
+    } */
 
 
 }
@@ -328,17 +334,36 @@ img {
 } */
 
 @media (max-width: 365px) {
-    .skills-grid{
+    .row {
+    width: 100%;
+    margin: 0 auto;
+}
+    /* .skills-grid{
         grid-template-columns: repeat(1, 1fr); 
         margin-top: 5.8rem;
-    }
+    } */
 
     .soft-grid{
         margin-top: 3.5rem !important;
     }
 }
 
+@media (max-width: 355px) {
+    .row {
+    width: 100%;
+    margin: 0 auto;
+}
+    .skills-grid{
+        grid-template-columns: repeat(1, 1fr); 
+        margin-top: 5.8rem;
+    }
+}
+
 @media (max-width: 330px) {
+    .row {
+    width: 100%;
+    margin: 0 auto;
+}
     .soft-grid{
         margin-top: 3.5rem !important;
         margin-right: 3rem !important;

@@ -68,9 +68,7 @@
   
   .subtext {
     text-align: center;
-    font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #666;
   }
   
   .job-list {
@@ -89,12 +87,13 @@
   .job-tabs li {
     padding: 15px;
     cursor: pointer;
-    font-size: 1.1rem;
     color: #666;
     border-left: 2px solid transparent;
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    font-weight: 200;
+    font-family: "JetBrains Mono", monospace;
   }
   
   .job-tabs li.active {
@@ -117,17 +116,16 @@
   .job-details h3 {
     font-size: 1.75rem;
     color: #89ff00;
+    font-family: "Poppins";
   }
   
   .job-details .job-duration {
     font-size: 1rem;
-    color: #666;
     margin-bottom: 20px;
   }
   
   .job-details p {
-    font-size: 1.1rem;
-    color: #333;
+    font-weight: 200 !important;
   }
 
   @media (max-width:475px) {

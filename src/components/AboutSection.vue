@@ -96,6 +96,11 @@ export default {
         font-size: 2rem;
     }
 
+    #about .info {
+    width: 80%;
+    margin: 0 auto;
+}
+
 }
 
 

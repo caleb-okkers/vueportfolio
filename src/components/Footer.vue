@@ -86,7 +86,7 @@ svg {
 }
 
 footer {
-    margin-left: 2.2rem;
+    margin-left: 2.7rem;
   }
 
   @media (max-width:600px) {
@@ -100,7 +100,7 @@ footer {
 @media (max-width:475px) {
 
   footer {
-    margin-left: 0rem;
+    padding-left: 1.25rem;
     padding-bottom: 5rem;
   }
 

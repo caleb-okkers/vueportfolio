@@ -192,7 +192,7 @@ iframe {
 
     .spline-contact {
         width: 100% !important;
-        padding-right: 12px;
+        /* padding-right: 12px; */
         
     }
 
